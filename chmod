@@ -21,4 +21,4 @@ chmod +x ~/SH/bin/*
 
 # source ~/.bash_profile
 
- ln ~/SH/bin/*.sh  /usr/bin
+ln ~/SH/bin/*.sh  /usr/bin
