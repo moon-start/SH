@@ -3,7 +3,7 @@
 echo `pwd`
 
 ############## 預設是家目錄
-cd 'pwd'
+cd ~/SH
 chmod +x *.sh
 
 
