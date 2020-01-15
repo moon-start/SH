@@ -4,4 +4,5 @@ echo `pwd`
 
 chmod +x *.sh
 
-export PATH=`pwd`:$PATH
+##  nano ~/.bash_profile
+echo export PATH=`pwd`:$PATH:12345
