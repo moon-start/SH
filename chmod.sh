@@ -4,7 +4,7 @@ echo `pwd`
 
 ############## 預設是家目錄
 # cd ~/SH 無效
-echo chmod +x 'pwd'/*.sh
+echo chmod +x `pwd`/*.sh
 
 
 # PATH=`pwd`:$PATH:12345
