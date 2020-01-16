@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# 安裝需要的套件
+yum install php-xml rsyslog
+systemctl start rsyslog
+systemctl restart php-fpm
+
+
+composer install
