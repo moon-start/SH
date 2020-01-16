@@ -1,6 +1,6 @@
 #!/bin/bash
 
-yum install wget
+yum -y install wget
 wget https://getcomposer.org/installer -O composer-installer.php
 
 ### 安裝位置 ### /usr/local/bin     
