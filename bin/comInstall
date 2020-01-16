@@ -1,9 +1,18 @@
 #!/bin/bash
 
-# 安裝需要的套件
-yum install php-xml rsyslog
-systemctl start rsyslog
-systemctl restart php-fpm
-
-
+cd ./PHPproject
 composer install
+
+# 注意一下目錄權限設定
+chown -R nginx ../PHPproject
+semanage fcontext -a -t httpd_sys_rw_content_t "/usr/share/nginx/html/PHPexerise/PHPproject/storage(/.*)?"
+semanage fcontext -a -t httpd_sys_rw_content_t "/usr/share/nginx/html/PHPexerise/PHPproject/resources(/.*)?"
+restorecon -Rvv ../PHPproject
+
+# 設定 .env 檔案
+# cd ../PHPproject
+cp .env.example .env
+
+
+# 設定加密的 key
+php artisan key:generate

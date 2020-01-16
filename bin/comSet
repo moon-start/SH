@@ -7,4 +7,11 @@ wget https://getcomposer.org/installer -O composer-installer.php
 php composer-installer.php --filename=composer --install-dir=/usr/local/bin
 ### 檢查 成功版本
 composer --version
+
+
+# 安裝需要的套件
+yum install php-xml rsyslog
+systemctl start rsyslog
+systemctl restart php-fpm
+
     
