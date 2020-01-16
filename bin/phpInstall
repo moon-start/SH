@@ -1,5 +1,8 @@
 #!/bin/bash
 
+cd ~/www
+git clone https://github.com/moon-start/PHPproject.git
+
 cd ./PHPproject
 composer install
 
