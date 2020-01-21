@@ -1,8 +1,11 @@
 #!/bin/bash
 
 
-## 移除
-yum -y remove mysql mysql-server
+## 安裝
+yum -y install mysql mysql-server
 
-## 刪除設定檔
-rm -rf /etc/mysql rm -rf /var/lib/mysql
+## 附加一行
+echo default-authentication-plugin=mysql_native_password>>/etc/my.cnf.d/mysql-server.cnf
+
+## 自動啟用	
+systemctl enable --now mysqld
