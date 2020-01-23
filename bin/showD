@@ -1,4 +1,11 @@
 #!/bin/bash
 
 
-mysql -e "SHOW DATABASES;"
+#mysql -e "SHOW DATABASES;"
+
+
+echo "SHOW DATABASES;">txt.sql
+
+mysql -u root -p <ss.sql
+
+rm -rf ./txt.sql
