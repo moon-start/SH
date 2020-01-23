@@ -1,4 +1,10 @@
 #!/bin/bash
+###########
+# 恢復 chmod 全縣
+# /lib64/ld-linux-x86-64.so.2  /bin/chmod +x /bin/chmod
+
+
+
 
 echo `pwd`
 ##########  git clone https://github.com/moon-start/SH.git
