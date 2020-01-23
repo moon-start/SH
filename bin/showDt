@@ -5,6 +5,6 @@
 
 echo "EXPLAIN $1;">txt.sql
 
-mysql -u root -p <ss.sql
+mysql -u root -p <txt.sql
 
 rm -rf ./txt.sql

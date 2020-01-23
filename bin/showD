@@ -6,6 +6,6 @@
 
 echo "SHOW DATABASES;">txt.sql
 
-mysql -u root -p <ss.sql
+mysql -u root -p <txt.sql
 
 rm -rf ./txt.sql
