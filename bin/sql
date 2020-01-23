@@ -13,10 +13,10 @@
 
 
 ## 方法C
-# while read line
-# do
-#     echo $line
-# done < file(待讀取的檔案)
+while read line
+do
+    echo $line
+done < file($1)
 ## 方法A
 # for line in `cat file(待讀取的檔案)`
 # do
@@ -24,8 +24,9 @@
 
 # done
 ## 方法B
-cat file($1) | while read line
-do
-    echo $line
-done
+
+# cat file($1) | while read line
+# do
+#     echo $line
+# done
 
