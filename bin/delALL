@@ -5,4 +5,4 @@ cd `pwd`/bin
 
 echoSH ./*
 
-rm -rf ${@##*/}
+rm -rf ./${@##*/}
