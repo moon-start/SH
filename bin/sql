@@ -16,7 +16,7 @@
 while read line
 do
     echo $line
-done < file("$1")
+done < file\($1\)
 ## 方法A
 # for line in `cat file(待讀取的檔案)`
 # do
