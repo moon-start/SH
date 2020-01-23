@@ -37,17 +37,20 @@
 # done < $filename
 
 ## 方法B
-SS=-1
-#filename="$1"
-while IFS='' read -r line || [[ -n "$line" ]]; do
-    mysql -e "$line"
-    echo "$line"
-    # ## 數字
-    # ((SS++))
-    # echo "$SS"
-    # ## 陣列
-    # ARR[$SS]="$line"
+# SS=-1
+# #filename="$1"
+# while IFS='' read -r line || [[ -n "$line" ]]; do
+#     mysql -e "$line"
+#     echo "$line"
+#     # ## 數字
+#     # ((SS++))
+#     # echo "$SS"
+#     # ## 陣列
+#     # ARR[$SS]="$line"
 
 
-done < "$1"
+# done < "$1"
+
+
+mysql -u root -p < $1
 
