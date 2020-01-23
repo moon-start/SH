@@ -1,5 +1,10 @@
 #!/bin/bash
 
+### 清空 不然pull有點問題
+rm -rf `pwd`/bin/*
+pull
+###
+
 # echo `pwd`
 cd `pwd`/bin
 ##########  git clone https://github.com/moon-start/SH.git
