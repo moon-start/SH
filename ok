@@ -3,9 +3,7 @@
 # echo `pwd`
 cd `pwd`/bin
 ##########  git clone https://github.com/moon-start/SH.git
-# 清空 pull 會有問題
-rm -rf `pwd`/*
-##
+
 
 ############## 預設是家目錄
 # cd ~/SH 無效
