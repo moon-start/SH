@@ -1,0 +1,10 @@
+#!/bin/bash
+
+
+
+if [ "$@" = "1 2 3" ]
+then
+    echo "var is 123"
+else
+    echo "var is 456"
+fi
