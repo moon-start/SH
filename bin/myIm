@@ -2,7 +2,7 @@
 
 
 
-mysqldump -u root -p $1 <$1B.sql
+mysqldump -u root -p $1>$1B.sql
 
 
 echo "CREATE DATABASE $1;">$1.sql
