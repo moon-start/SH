@@ -2,8 +2,4 @@
 
 ### 當前目錄的底下bin
 cd `pwd`/bin
-### echo `pwd`/*
-cd /usr/bin
-
-
-echo `pwd`/${@##*/}
+ALLB `pwd`/*
