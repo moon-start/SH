@@ -1,0 +1,9 @@
+#!/bin/bash
+
+
+mysql -e "EXPLAIN $1 ;"
+
+
+
+# SHOW TABLES FROM db_name [LIKE ...];
+
