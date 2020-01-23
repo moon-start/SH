@@ -3,4 +3,14 @@
 cd /usr/bin
 
 
-echo `pwd`/${@##*/}
+#echo `pwd`/${@##*/}
+$dir =`pwd`/${@##*/}
+
+
+for i in $dir
+do
+ echo $i
+done
+#######
+
+
