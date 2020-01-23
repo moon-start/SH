@@ -8,7 +8,7 @@
 
 if [ "$#" = "0" ]
 then
-    echo "len( )=0"
+    #echo "len( )=0"
     sh ok `pwd`
 else
     #echo "$@"
@@ -25,6 +25,7 @@ else
     chmod +x `pwd`/bin/*
 
     ln `pwd`/bin/*  /usr/bin
+    echo ln 完成!!
 fi
 
 
