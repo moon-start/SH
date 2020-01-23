@@ -13,10 +13,10 @@
 
 
 ## 方法C
-while read line
-do
-    echo $line
-done < file\("$1"\)
+# while read line
+# do
+#     echo $line
+# done < file\("$1"\)
 ## 方法A
 # for line in `cat file(待讀取的檔案)`
 # do
@@ -30,3 +30,8 @@ done < file\("$1"\)
 #     echo $line
 # done
 
+
+filename='$1'
+while IFS='' read -r line || [[ -n "$line" ]]; do
+    echo "a $line" # 一行一行印出內容，前面加上 a
+done < $filename
