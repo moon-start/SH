@@ -13,17 +13,20 @@ SS=0
 #filename="$1"
 while IFS='' read -r line || [[ -n "$line" ]]; do
     # ## 數字
-    ((SS++))
+    #((SS++))
     # echo "$SS"
     # ## 陣列
     # ARR[$SS]="$line"
-    
-    if [[ "$SS" -qt "23" ]]
-    then
-        echo "$line">>$1.sql
-    else
-        echo "$line"
-    fi
+
+
+    echo "$line">>$1.sql
+    # if [ "$SS" = "23" ]
+    # then
+    #     echo "$line">>$1.sql
+    # else
+    #     #echo "$line"
+    #     ((SS++))
+    # fi
 
 done < "$1B.sql"
 

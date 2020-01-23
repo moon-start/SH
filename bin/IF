@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# 進階範例：
+# 1.看/etc/passwd檔案的16～30行
+#head -n 30 /etc/passwd | tail -n 15
 
 
 if [ "$@" = "1 2 3" ]
