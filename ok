@@ -20,12 +20,12 @@ else
     chmod +x `pwd`/ok
     ln `pwd`/ok  /usr/bin
 
-    echo SH目錄位置: `pwd`
+    echo  SH目錄位置: `pwd`
     ##########  git clone https://github.com/moon-start/SH.git
     chmod +x `pwd`/bin/*
 
     ln `pwd`/bin/*  /usr/bin
-    echo ln 完成!!
+    echo  ln 完成!!
 fi
 
 
