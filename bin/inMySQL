@@ -1,0 +1,11 @@
+#!/bin/bash
+
+
+## 安裝
+yum -y install mysql mysql-server
+
+## 附加一行
+echo default-authentication-plugin=mysql_native_password>>/etc/my.cnf.d/mysql-server.cnf
+
+## 自動啟用	
+systemctl enable --now mysqld

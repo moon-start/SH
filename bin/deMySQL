@@ -1,0 +1,8 @@
+#!/bin/bash
+
+
+## 移除
+yum -y remove mysql mysql-server
+
+## 刪除設定檔
+rm -rf /etc/mysql rm -rf /var/lib/mysql
