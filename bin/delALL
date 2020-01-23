@@ -14,4 +14,4 @@ cd /usr/bin
 
 echoSH ./*
 
-rm -rf ./${@##*/}
+#rm -rf ./${@##*/}
