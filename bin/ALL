@@ -1,8 +1,8 @@
 #!/bin/bash
 
 ### 當前目錄的底下bin
-cd `pwd`/bin
-ALLB `pwd`/*
+# cd `pwd`/bin
+# ALLB `pwd`/*
 
 
 # if [ "$1" = "123" ]
@@ -11,3 +11,7 @@ ALLB `pwd`/*
 # else
 #     echo "var is 456"
 # fi
+
+history
+
+

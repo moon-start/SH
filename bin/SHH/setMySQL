@@ -1,0 +1,31 @@
+#!/bin/bash
+systemctl enable --now cockpit.socket
+#systemctl status cockpit.socket
+
+
+
+### 安裝
+yum -y install mysql mysql-server
+
+### 附加一行
+echo default-authentication-plugin=mysql_native_password>>/etc/my.cnf.d/mysql-server.cnf
+
+### 開機啟動
+systemctl enable --now mysqld
+# ### 查看
+# # systemctl status nginx -l
+
+
+# ### 防火牆
+# # 暫時設定(打開防火牆)
+# firewall-cmd --add-service=http
+
+# # 永久設定
+# firewall-cmd --add-service=http --permanent
+
+
+# # systemctl restart nginx ##重新啟動服務
+# # ls -al /usr/share/nginx/html
+
+
+

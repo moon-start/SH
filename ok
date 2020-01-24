@@ -15,9 +15,9 @@ else
     #echo "var is 456"
     ### 清空
     sh ./bin/BinDel
-    ### 自己
-    #rm -rf /usr/bin/ok
     rm -rf /usr/bin/*
+    ### 自己
+    rm -rf /usr/bin/ok
     chmod +x `pwd`/ok
     ln `pwd`/ok  /usr/bin
 
@@ -25,11 +25,15 @@ else
     echo  SH目錄位置: `pwd`
     ##########  git clone https://github.com/moon-start/SH.git
     chmod +x `pwd`/bin/*
-
     ln `pwd`/bin/*  /usr/bin
     echo  ln 完成!!
     echo ""
+    ##########
+    # chmod +x `pwd`/install/*
+    # ln `pwd`/install/*  /usr/bin
+    # echo ""
 fi
+
 
 
 
