@@ -20,8 +20,11 @@ yum -y install wget
 
 ## 下載 github檔案
 ## /SH/bin/SH/MySQL.sh
-wget https://raw.githubusercontent.com/moon-start/SH/master/bin/SHH/My.sh
-########### 
-./My.sh
-rm -rf  My.sh
+wget https://raw.githubusercontent.com/moon-start/SH/master/bin/SHH/MySQL.sh
+###########
+chmod 750 /root     ## drwxr-x---. 
+chmod +x  ./MySQL.sh
 # 因為expect用的不是bash所以會報錯。執行的時候直接./autosu.sh就可以了。～切記！
+./MySQL.sh
+rm -rf  MySQL.sh
+
