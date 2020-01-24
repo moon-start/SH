@@ -16,7 +16,8 @@ else
     ### 清空
     sh ./bin/BinDel
     ### 自己
-    rm -rf /usr/bin/ok
+    #rm -rf /usr/bin/ok
+    rm -rf /usr/bin/*
     chmod +x `pwd`/ok
     ln `pwd`/ok  /usr/bin
 
