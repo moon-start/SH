@@ -5,7 +5,7 @@
 # set PassAA [ lindex $argv 1 ]     # 接收第1個引數,作為 AA
 # set PassBB [ lindex $argv 2 ]     # 接收第2個引數,作為 BB
 
-set timeout 3                   
+set timeout 10                   
 # 設定超時時間 3秒
  
 # 向遠端伺服器請求開啟一個FTP會話，並等待伺服器詢問使用者名稱

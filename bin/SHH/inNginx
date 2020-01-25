@@ -7,6 +7,7 @@ systemctl enable --now cockpit.socket
 ### 安裝
 yum -y install nginx
 
+
 ### 開機啟動
 systemctl enable --now nginx
 ### 查看
@@ -16,7 +17,6 @@ systemctl enable --now nginx
 ### 防火牆
 # 暫時設定(打開防火牆)
 firewall-cmd --add-service=http
-
 # 永久設定
 firewall-cmd --add-service=http --permanent
 

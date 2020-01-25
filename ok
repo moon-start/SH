@@ -2,6 +2,9 @@
 ###########
 # 恢復 chmod 全縣
 # /lib64/ld-linux-x86-64.so.2  /bin/chmod +x /bin/chmod
+###########
+# cd /lib64
+# ./ld-linux-x86-64.so.2  /bin/chmod +x /bin/chmod
 
 
 # ${@##*/}
@@ -14,7 +17,9 @@ else
     #echo "$@"
     #echo "var is 456"
     ### 清空
-    sh ./bin/BinDel
+    sh ./bin/Del/BinDel
+    sh ./bin/Del/BinSH
+    sh ./bin/Del/BinSHH
     rm -rf /usr/bin/*
     ### 自己
     rm -rf /usr/bin/ok
@@ -25,13 +30,19 @@ else
     echo  SH目錄位置: `pwd`
     ##########  git clone https://github.com/moon-start/SH.git
     chmod +x `pwd`/bin/*
-    ln `pwd`/bin/*  /usr/bin
+    chmod +x `pwd`/bin/Del/*
+    ln `pwd`/bin/*      /usr/bin
+    ln `pwd`/bin/Del/*  /usr/bin
     echo  ln 完成!!
     echo ""
-    ##########
-    # chmod +x `pwd`/install/*
-    # ln `pwd`/install/*  /usr/bin
-    # echo ""
+    ########## SH
+    chmod +x `pwd`/bin/SH/*
+    ln `pwd`/bin/SH/*  /usr/bin
+    echo ""
+    ########## SHH
+    chmod +x `pwd`/bin/SHH/*
+    ln `pwd`/bin/SHH/*  /usr/bin
+    echo ""
 fi
 
 

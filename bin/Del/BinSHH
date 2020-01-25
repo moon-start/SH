@@ -4,7 +4,7 @@
 
 ### 一次性的檔案
 ### 顯示目前的 目錄
-for dir in $(ls `pwd`/bin)
+for dir in $(ls `pwd`/bin/SHH)
 do
  #echo "123"
  #echo $dir
