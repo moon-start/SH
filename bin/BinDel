@@ -10,9 +10,8 @@ do
  #echo "123"
  #echo $dir
  #[ -d $dir ] && echo $dir
- cd /usr/bin
- rm -rf `pwd`/$dir 
- cd ../
+ 
+ rm -rf /usr/bin/$dir 
 done
 
 
@@ -20,13 +19,11 @@ done
 
 for dir in $(ls `pwd`/binSH)
 do
- cd /usr/bin
- rm -rf `pwd`/$dir 
- cd ../
+     
+ rm -rf /usr/bin/$dir 
 done
 for dir in $(ls `pwd`/binSHH)
 do
- cd /usr/bin
- rm -rf `pwd`/$dir
- cd ../ 
+     
+ rm -rf /usr/bin/$dir 
 done
