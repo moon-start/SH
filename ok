@@ -24,7 +24,9 @@ else
     #echo "$@"
     #echo "var is 456"
     ### 清空
-    sh ./bin/BinDel
+    chmod +x `pwd`/bin/Del/BinDel
+    sh `pwd`/bin/Del/BinDel
+
     # sh ./bin/Del/BinDel
     # sh ./bin/Del/BinSH
     # sh ./bin/Del/BinSHH
