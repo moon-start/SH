@@ -28,7 +28,7 @@ yum -y install wget
 
 ## 下載 github檔案
 ## /SH/bin/SH/MySQL.sh
-wget https://raw.githubusercontent.com/moon-start/SH/master/bin/SHH/MySQL.sh
+wget https://raw.githubusercontent.com/moon-start/SH/master/binSH/MySQL.sh
 ###########
 chmod 750 /root     ## drwxr-x---. 
 chmod +x  ./MySQL.sh
