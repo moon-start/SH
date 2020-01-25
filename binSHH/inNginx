@@ -23,6 +23,8 @@ firewall-cmd --add-service=http --permanent
 
 # systemctl restart nginx ##重新啟動服務
 # ls -al /usr/share/nginx/html
+ln -s /usr/share/nginx/html /root/www
+
 
 
 
