@@ -1,5 +1,6 @@
 #!/bin/bash
 
+home =`pwd`
 
 ## 安裝 
 yum -y install php php-fpm  php-json php-gd php-mbstring
@@ -15,4 +16,8 @@ yum -y install php php-fpm  php-json php-gd php-mbstring
 #   slowlog = /var/log/php-fpm/www-slow.log
 #   php_admin_value[error_log] = /var/log/php-fpm/www-error.log
 #   php_admin_flag[log_errors] = on
+
+
+wget https://raw.githubusercontent.com/moon-start/SH/master/binSH/www.conf
+chmod 644 /etc/php-fpm.d/www.conf
 
