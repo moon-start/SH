@@ -25,17 +25,14 @@ else
     #echo "var is 456"
     ### 清空
     # chmod +x `pwd`/binDel/BinDel
-    chmod +x `pwd`/binDel/*
+    #chmod +x `pwd`/binDel/*
     sh `pwd`/binDel/BinDel
-    sh `pwd`/binDel/BinSH
-    sh `pwd`/binDel/BinSHH
+    #sh `pwd`/binDel/BinSH
+    #sh `pwd`/binDel/BinSHH
 
     ### 自己
     rm -rf /usr/bin/ok
-    rm -rf /usr/bin/del
     chmod +x `pwd`/ok
-    chmod +x `pwd`/del
-    ln `pwd`/ok  /usr/bin
     ln `pwd`/ok  /usr/bin
 
     echo ""
@@ -45,14 +42,14 @@ else
     ln `pwd`/bin/*      /usr/bin
     echo  ln 完成!!
     echo ""
-    ########## SH
-    chmod +x `pwd`/binSH/*
-    ln `pwd`/binSH/*  /usr/bin
-    echo ""
-    ########## SHH
-    chmod +x `pwd`/binSHH/*
-    ln `pwd`/binSHH/*  /usr/bin
-    echo ""
+    # ########## SH
+    # chmod +x `pwd`/binSH/*
+    # ln `pwd`/binSH/*  /usr/bin
+    # echo ""
+    # ########## SHH
+    # chmod +x `pwd`/binSHH/*
+    # ln `pwd`/binSHH/*  /usr/bin
+    # echo ""
 fi
 
 

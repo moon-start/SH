@@ -14,11 +14,11 @@ do
  rm -rf `pwd`/$dir 
 done
 
-for dir in $(ls `pwd`/binDel)
-do
- #echo "123"
- #echo $dir
- #[ -d $dir ] && echo $dir
- cd /usr/bin
- rm -rf `pwd`/$dir 
-done
+# for dir in $(ls `pwd`/binDel)
+# do
+#  #echo "123"
+#  #echo $dir
+#  #[ -d $dir ] && echo $dir
+#  cd /usr/bin
+#  rm -rf `pwd`/$dir 
+# done
