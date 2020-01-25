@@ -24,32 +24,28 @@ else
     #echo "$@"
     #echo "var is 456"
     ### 清空
-    # chmod +x `pwd`/binDel/BinDel
-    #chmod +x `pwd`/binDel/*
-    sh `pwd`/binDel/BinDel
-    #sh `pwd`/binDel/BinSH
-    #sh `pwd`/binDel/BinSHH
-
+    sh `pwd`/bin/BinDel
     ### 自己
     rm -rf /usr/bin/ok
     chmod +x `pwd`/ok
     ln `pwd`/ok  /usr/bin
-
     echo ""
     echo  SH目錄位置: `pwd`
+    ##
+    ##
     ##########  git clone https://github.com/moon-start/SH.git
     chmod +x `pwd`/bin/*
     ln `pwd`/bin/*      /usr/bin
     echo  ln 完成!!
     echo ""
-    # ########## SH
-    # chmod +x `pwd`/binSH/*
-    # ln `pwd`/binSH/*  /usr/bin
-    # echo ""
-    # ########## SHH
-    # chmod +x `pwd`/binSHH/*
-    # ln `pwd`/binSHH/*  /usr/bin
-    # echo ""
+    ########## SH
+    chmod +x `pwd`/binSH/*
+    ln `pwd`/binSH/*  /usr/bin
+    echo ""
+    ########## SHH
+    chmod +x `pwd`/binSHH/*
+    ln `pwd`/binSHH/*  /usr/bin
+    echo ""
 fi
 
 
