@@ -29,9 +29,10 @@ else
     # sh ./bin/Del/BinSH
     # sh ./bin/Del/BinSHH
     ### 自己
-    rm -rf /usr/bin/ok
+    #rm -rf /usr/bin/ok
     chmod +x `pwd`/ok
-    ln `pwd`/ok  /usr/bin
+    chmod +x `pwd`/del
+    #ln `pwd`/ok  /usr/bin
 
     echo ""
     echo  SH目錄位置: `pwd`
