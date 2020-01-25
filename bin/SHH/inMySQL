@@ -1,7 +1,6 @@
 #!/bin/bash
 systemctl enable --now cockpit.socket
 yum -y install epel-release
-yum -y install git
 #systemctl status cockpit.socket
 
 ## 安裝 客戶端和伺服器端
