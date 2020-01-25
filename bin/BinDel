@@ -12,6 +12,7 @@ do
  #[ -d $dir ] && echo $dir
  cd /usr/bin
  rm -rf `pwd`/$dir 
+ cd ../
 done
 
 
@@ -21,9 +22,11 @@ for dir in $(ls `pwd`/binSH)
 do
  cd /usr/bin
  rm -rf `pwd`/$dir 
+ cd ../
 done
 for dir in $(ls `pwd`/binSHH)
 do
  cd /usr/bin
- rm -rf `pwd`/$dir 
+ rm -rf `pwd`/$dir
+ cd ../ 
 done
