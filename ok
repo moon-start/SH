@@ -20,7 +20,6 @@ else
     sh ./bin/Del/BinDel
     sh ./bin/Del/BinSH
     sh ./bin/Del/BinSHH
-    rm -rf /usr/bin/*
     ### 自己
     rm -rf /usr/bin/ok
     chmod +x `pwd`/ok
