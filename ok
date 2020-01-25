@@ -24,16 +24,19 @@ else
     #echo "$@"
     #echo "var is 456"
     ### 清空
-    chmod +x `pwd`/binDel/BinDel
+    # chmod +x `pwd`/binDel/BinDel
+    chmod +x `pwd`/binDel/*
     sh `pwd`/binDel/BinDel
     sh `pwd`/binDel/BinSH
     sh `pwd`/binDel/BinSHH
 
     ### 自己
-    #rm -rf /usr/bin/ok
+    rm -rf /usr/bin/ok
+    rm -rf /usr/bin/del
     chmod +x `pwd`/ok
     chmod +x `pwd`/del
-    #ln `pwd`/ok  /usr/bin
+    ln `pwd`/ok  /usr/bin
+    ln `pwd`/ok  /usr/bin
 
     echo ""
     echo  SH目錄位置: `pwd`
