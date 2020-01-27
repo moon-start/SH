@@ -17,7 +17,10 @@ yum -y install php php-fpm  php-json php-gd php-mbstring
 #   php_admin_value[error_log] = /var/log/php-fpm/www-error.log
 #   php_admin_flag[log_errors] = on
 
-
+rm -rf /etc/php-fpm.d/www.conf
 wget https://raw.githubusercontent.com/moon-start/SH/master/binSH/www.conf
 chmod 644 /etc/php-fpm.d/www.conf
 
+
+### 重新啟動 服務
+# systemctl restart network.service

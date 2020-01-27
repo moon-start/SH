@@ -6,6 +6,10 @@
 # cd /lib64
 # ./ld-linux-x86-64.so.2  /bin/chmod +x /bin/chmod
 
+# 查看CentOS的版本號：
+# cat /etc/centos-release
+
+
 ### 設定網卡IP
 # nmtui
 ### 前置 專案
