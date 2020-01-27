@@ -23,5 +23,40 @@ wget https://raw.githubusercontent.com/moon-start/SH/master/binSH/www.conf
 chmod 644 /etc/php-fpm.d/www.conf
 cd ~/
 
-### 重新啟動 服務
-# systemctl restart network.service
+
+### 編輯 服務
+# nano /usr/lib/systemd/system/php-fpm.service
+### 查看当前进程列表是否存在 php-fpm 进程：
+# ps aux|grep php-fpm
+
+
+
+
+# 查看状态
+# systemctl status php-fpm
+
+# 重新啟動
+systemctl restart php-fpm
+# 修改配置文件后重载
+# systemctl reload php-fpm
+
+# 開機 自動啟用
+# systemctl enable php-fpm
+# 開機 禁止啟用
+# systemctl didable php-fpm
+
+
+
+### 安裝位置
+# rpm -qal |grep php-fpm
+
+
+
+### 找文件
+# find / -type f -name www.conf
+### 找目錄        /etc/nginx
+#find / -type d -name nginx
+
+
+
+
