@@ -6,4 +6,12 @@ yum -y remove nginx
 
 rm -rf /root/www 
 
-rm -rf /etc/nginx
+rm -rf /etc/nginx 
+
+
+rm -rf /usr/lib/systemd/system/nginx.service.d
+
+
+# Created symlink /etc/systemd/system/multi-user.target.wants/nginx.service → /usr/lib/systemd/system/nginx.service.
+# Job for nginx.service failed because the control process exited with error code.
+# See "systemctl status nginx.service" and "journalctl -xe" for details.
