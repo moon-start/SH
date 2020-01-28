@@ -31,21 +31,24 @@ ln -s /usr/share/nginx/html /root/www
 ### 建立一個 /etc/nginx/nginx.conf
 cd /etc/nginx
 rm -rf ./nginx.conf
-wget https://raw.githubusercontent.com/moon-start/SH/master/binSH/nginx.conf
+wget https://raw.githubusercontent.com/moon-start/SH/master/binSHH/conf/nginx.conf
 ### 建立一個 /etc/nginx/conf.d/default.conf
 cd /etc/nginx/conf.d
-wget https://raw.githubusercontent.com/moon-start/SH/master/binSH/default.conf
+wget https://raw.githubusercontent.com/moon-start/SH/master/binSHH/conf/default.conf
 ##
 cd /usr/share/nginx/html
-wget https://raw.githubusercontent.com/moon-start/SH/master/binSH/index.php
+wget https://raw.githubusercontent.com/moon-start/SH/master/binSHH/conf/index.php
 ## 重新載入設定
 # systemctl reload nginx
 nginx -c /etc/nginx/nginx.conf
+# nginx -c /etc/nginx/conf.d/default.conf
 nginx -s reload
 
 
+## 好像不用
 # mv /etc/nginx/default.d/php.conf    /root
 # mv /etc/nginx/conf.d/php-fpm.conf   /root
+# restorecon -Rvv /usr/share/nginx/html
 
 
 
