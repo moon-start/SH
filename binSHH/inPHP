@@ -19,7 +19,7 @@ yum -y install php php-fpm  php-json php-gd php-mbstring
 
 rm -rf /etc/php-fpm.d/www.conf
 cd /etc/php-fpm.d
-wget https://raw.githubusercontent.com/moon-start/SH/master/binSH/www.conf
+wget https://raw.githubusercontent.com/moon-start/SH/master/binSHHconf/www.conf
 chmod 644 /etc/php-fpm.d/www.conf
 cd ~/
 
