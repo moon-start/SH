@@ -2,4 +2,4 @@
  
 
 #YUM移除套件
-yum remove nginx
+yum -y remove nginx
