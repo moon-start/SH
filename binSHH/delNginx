@@ -3,3 +3,7 @@
 
 #YUM移除套件
 yum -y remove nginx
+
+rm -rf /root/www 
+
+rm -rf /etc/nginx
