@@ -12,7 +12,9 @@ set timeout 1
 
 
 ### set timeout 下面
-set name [lindex $argv 0 ]   # 接收第1個引數,作為 NameQQ  ### 失敗
+### 後面不可以加東西
+# 接收第1個引數,作為 name
+set name [lindex $argv 0 ]   
 # set PassAA [ lindex $argv 1 ]     # 接收第1個引數,作為 AA
 # set PassBB [ lindex $argv 2 ]     # 接收第2個引數,作為 BB
 
