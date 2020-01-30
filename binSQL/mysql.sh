@@ -24,18 +24,25 @@ set name [lindex $argv 0 ]
 
 ##### A
 #spawn echo "$name">txt.sql
-spawn notepad.sh   "SHOW DATABASES;"
-    expect eof
+# spawn notepad.sh   "SHOW DATABASES;"
+#     expect eof
 
 
-##### B
-spawn notepadB.sh
+# ##### B
+# spawn notepadB.sh
+#     expect "輸入密碼\r"
+#     send "hello123\r"
+    
+#     expect eof
+
+
+# ##### C
+# spawn rm -rf ./txt.sql
+#     expect eof
+
+##### 
+spawn showD
     expect "輸入密碼\r"
     send "hello123\r"
     
-    expect eof
-
-
-##### C
-spawn rm -rf ./txt.sql
     expect eof

@@ -8,7 +8,7 @@
 
 echo "SHOW DATABASES;">txt.sql
 
-mysql -u root -p <txt.sql
+mysql -u root -p <txt.sql >  cat.txt
 
 rm -rf ./txt.sql
 
