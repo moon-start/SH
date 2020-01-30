@@ -53,6 +53,7 @@ else
     ########## SQL
     chmod +x `pwd`/binSQL/*
     ln `pwd`/binSQL/*  /usr/bin
+    rm -rf     /usr/bin/*.sql
     cp -f `pwd`/binSQL/*.sql  /usr/bin
     echo ""
 fi
