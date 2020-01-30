@@ -11,6 +11,7 @@ wget https://raw.githubusercontent.com/moon-start/SH/master/binSHHconf/phpMyAdmi
 ## 解壓縮
 tar zxvf phpMyAdmin-4.9.1-all-languages.tar.gz
 mv phpMyAdmin-4.9.1-all-languages Admin
+rm -rf  phpMyAdmin-4.9.1-all-languages.tar.gz
 
 
 ## 下載檔案

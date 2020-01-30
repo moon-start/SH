@@ -15,3 +15,15 @@ rm -rf /usr/lib/systemd/system/nginx.service.d
 # Created symlink /etc/systemd/system/multi-user.target.wants/nginx.service → /usr/lib/systemd/system/nginx.service.
 # Job for nginx.service failed because the control process exited with error code.
 # See "systemctl status nginx.service" and "journalctl -xe" for details.
+
+#5.7下
+#UPDATE mysql.user SET Password=PASSWORD('hello123') where USER='root';
+#XXX
+#UPDATE mysql.user SET authentication_string=PASSWORD('hello123') where USER='root';
+# 8版本
+# ALTER USER 'root'@'localhost' IDENTIFIED BY 'hello123';
+
+
+
+
+
