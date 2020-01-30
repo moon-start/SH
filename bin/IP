@@ -1,0 +1,4 @@
+#!/bin/bash
+
+### IP
+ip addr show | grep "24 brd"
