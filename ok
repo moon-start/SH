@@ -50,6 +50,10 @@ else
     chmod +x `pwd`/binSHH/*
     ln `pwd`/binSHH/*  /usr/bin
     echo ""
+    ########## SQL
+    chmod +x `pwd`/binSQL/*
+    ln `pwd`/binSQL/*  /usr/bin
+    echo ""
 fi
 
 

@@ -16,13 +16,20 @@ done
 
 
 
-
+##
 for dir in $(ls `pwd`/binSH)
 do
      
  rm -rf /usr/bin/$dir 
 done
+##
 for dir in $(ls `pwd`/binSHH)
+do
+     
+ rm -rf /usr/bin/$dir 
+done
+##
+for dir in $(ls `pwd`/binSQL)
 do
      
  rm -rf /usr/bin/$dir 

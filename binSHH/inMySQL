@@ -48,4 +48,8 @@ rm -rf  MySQL.sh
 
 
 # Which命令是通過PATH環境變數查詢可執行檔案路徑，用於查詢指向這個命令所在的資料夾
-which mysql
+# which mysql
+
+
+## 如果密碼有問題..則在設定密碼 ...8版
+mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED BY 'hello123';"

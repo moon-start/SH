@@ -11,3 +11,7 @@ echo "SHOW DATABASES;">txt.sql
 mysql -u root -p <txt.sql
 
 rm -rf ./txt.sql
+
+
+## 刪除資料庫
+# DROP DATABASE `moon`;
