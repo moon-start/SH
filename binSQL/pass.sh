@@ -5,7 +5,10 @@
 # set PassAA [ lindex $argv 1 ]     # 接收第1個引數,作為 AA
 # set PassBB [ lindex $argv 2 ]     # 接收第2個引數,作為 BB
 
-set timeout 3                   
+### chmod +x 這個檔案
+### 使用方式..    打上檔名即可
+### 1秒後 自動執行
+set timeout 1                   
 # 設定超時時間
  
 # 向遠端伺服器請求開啟一個FTP會話，並等待伺服器詢問使用者名稱
