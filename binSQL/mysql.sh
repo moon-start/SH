@@ -24,7 +24,7 @@ set name [lindex $argv 0 ]
 
 ##### A
 #spawn echo "$name">txt.sql
-spawn echo "SHOW DATABASES;">txt.sql
+spawn notepad.sh   "SHOW DATABASES;"
     expect eof
 
 
