@@ -13,5 +13,8 @@ mysql -u root -p <txt.sql >  cat.txt
 rm -rf ./txt.sql
 
 
+echo " "
+echo " "
+echo " ######## "
 ## 刪除資料庫
 # DROP DATABASE `moon`;

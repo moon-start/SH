@@ -46,9 +46,7 @@ spawn showD
     send "hello123\r"
     
     expect eof
-spawn echo ""
-    expect eof
-spawn echo ""
-    expect eof
+
+#####
 spawn cat cat.txt
     expect eof
