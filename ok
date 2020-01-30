@@ -52,7 +52,8 @@ else
     echo ""
     ########## SQL
     chmod +x `pwd`/binSQL/*
-    ln `pwd`/binSQL/*  /usr/bin
+    # ln `pwd`/binSQL/*  /usr/bin
+    cp `pwd`/binSQL/*  /usr/bin
     echo ""
 fi
 
