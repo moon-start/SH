@@ -11,12 +11,12 @@ echo default-authentication-plugin=mysql_native_password>>/etc/my.cnf.d/mysql-se
 
 ## 自動啟用	
 systemctl enable --now mysqld
-啟動 MySQL 服務，並修改預設密碼
-#systemctl start mysqld
+# 啟動 MySQL 服務，並修改預設密碼
+systemctl start mysqld
 #mysql_secure_installation
-#firewall-cmd --add-service=mysql
-#firewall-cmd --runtime-to-permanent
-#systemctl restart mysqld
+firewall-cmd --add-service=mysql
+firewall-cmd --runtime-to-permanent
+systemctl restart mysqld
 
 
 ## 安裝 自動外掛

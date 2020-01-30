@@ -11,3 +11,16 @@ wget https://raw.githubusercontent.com/moon-start/SH/master/binSHHconf/phpMyAdmi
 ## 解壓縮
 tar zxvf phpMyAdmin-4.9.1-all-languages.tar.gz
 mv phpMyAdmin-4.9.1-all-languages Admin
+
+
+## 下載檔案
+cd /usr/share/nginx/html/admin
+wget https://raw.githubusercontent.com/moon-start/SH/master/binSHHconf/config.inc.php
+
+
+## 修改屬性
+restorecon -Rvv /usr/share/nginx/html
+chown root:nginx /var/lib/php/session
+yum -y install php-mysqlnd
+## 多餘
+systemctl restart php-fpm
