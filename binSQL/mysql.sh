@@ -29,7 +29,7 @@ spawn notepad.sh   "SHOW DATABASES;"
 
 
 ##### B
-spawn mysql -u root -p <txt.sql
+spawn notepadB.sh
     expect "輸入密碼\r"
     send "hello123\r"
     
