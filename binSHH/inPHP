@@ -35,7 +35,9 @@ cd ~/
 # 查看状态
 # systemctl status php-fpm
 
+
 # 重新啟動
+systemctl start php-fpm
 systemctl restart php-fpm
 # 修改配置文件后重载
 # systemctl reload php-fpm

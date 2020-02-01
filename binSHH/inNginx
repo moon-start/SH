@@ -27,7 +27,8 @@ ln -s /usr/share/nginx/html /root/www
 
 
 
-
+### 狀態
+## systemctl status nginx
 ### 建立一個 /etc/nginx/nginx.conf
 cd /etc/nginx
 rm -rf ./nginx.conf

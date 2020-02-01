@@ -3,6 +3,11 @@ systemctl enable --now cockpit.socket
 yum -y install epel-release
 #systemctl status cockpit.socket
 
+
+
+## 狀態
+#systemctl status mysqld.service
+
 ## 安裝 客戶端和伺服器端
 yum -y install mysql mysql-server
 

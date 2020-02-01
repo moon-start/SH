@@ -1,5 +1,5 @@
 LOAD DATA INFILE '/usr/bin/Invoice.csv' 
-INTO TABLE discounts 
+INTO TABLE Invoice
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
