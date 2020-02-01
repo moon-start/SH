@@ -6,7 +6,9 @@ yum -y remove nginx
 
 rm -rf /root/www 
 
-rm -rf /etc/nginx 
+rm -rf  /etc/nginx
+rm -rf  /usr/share/nginx
+ 
 
 
 rm -rf /usr/lib/systemd/system/nginx.service.d
