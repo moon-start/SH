@@ -1,5 +1,5 @@
 ## 直接修改檔案
-sed -e 's/9/99/g' moon_data.sql
+sed -i 's/9/99/g' moon_data.sql
 
 ## 輸出畫面
 sed -e 's/9/99/g' moon_data.sql
