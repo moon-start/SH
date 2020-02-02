@@ -6,7 +6,7 @@
 ### chmod +x 這個檔案
 ### 使用方式..    打上檔名即可
 ### 1秒後 自動執行
-set timeout 1                   
+set timeout 10                   
 # 設定超時時間
 
 
