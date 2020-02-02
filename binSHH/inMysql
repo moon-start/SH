@@ -3,7 +3,9 @@ systemctl enable --now cockpit.socket
 yum -y install epel-release
 #systemctl status cockpit.socket
 
-
+# chown mysql:mysql
+# chmod 777 
+# chmod o+t
 
 ## 狀態
 #systemctl status mysqld.service
