@@ -4,7 +4,7 @@
 
 -- 預設讀寫目錄
 --  show variables like '%tmpdir%';
-LOAD DATA INFILE '/root/SH/binSQL/Invoice.csv' 
+LOAD DATA INFILE '/var/tmp/Invoice.csv' 
 INTO TABLE Invoice
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"'
