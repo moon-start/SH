@@ -29,6 +29,13 @@ cd ~/
 ### 查看当前进程列表是否存在 php-fpm 进程：
 # ps aux|grep php-fpm
 
+#啟動 php-fpm 套件
+#mkdir /var/lib/php/session
+#chown nginx /var/lib/php/session
+#mkdir /var/lib/php/wsdlcache
+#chown nginx /var/lib/php/wsdlcache
+#mkdir /var/log/php-fpm
+#systemctl enable --now php-fpm
 
 
 

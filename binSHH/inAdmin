@@ -20,6 +20,7 @@ wget https://raw.githubusercontent.com/moon-start/SH/master/binSHHconf/config.in
 
 
 ## 修改屬性
+## http://192.168.1.114/Admin/
 restorecon -Rvv /usr/share/nginx/html
 chown root:nginx /var/lib/php/session
 yum -y install php-mysqlnd
