@@ -59,5 +59,14 @@
 
 ## 用法 + 輸入密碼
 ## sql /usr/bin/moon.sql 
-mysql -u root -p < $1
+# mysql -u root -p < $1
 
+pass.sh 
+
+set timeout 1                  
+set name [lindex $argv 0 ]   
+set G [lindex $argv 1 ]   
+spawn $name $G
+    expect "輸入密碼\r"
+    send "hello123\r"
+    expect eof
