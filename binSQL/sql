@@ -1,4 +1,8 @@
 #!/bin/bash
+# mysql -u root -p
+# show variables like '%secure%';
+# show variables like 'tmpdir';
+
 
 ### 一行顯示
 ### ls -l /usr/ |awk '/^d/ {print $NF}'
