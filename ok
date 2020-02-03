@@ -36,7 +36,7 @@ else
     echo ""
     echo ""
     echo ""
-    echo  SH目錄位置: `pwd`
+    echo  SH位置: `pwd`
     echo ""
     ##
     ##
