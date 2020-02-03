@@ -1,0 +1,7 @@
+#!/bin/bash
+
+
+
+
+# 設定加密的 key
+php artisan key:generate

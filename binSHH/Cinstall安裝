@@ -14,3 +14,8 @@ cd ~/www/$1
 ########
 composer install 
 
+
+
+## 在專案頂層目錄
+wget wget https://raw.githubusercontent.com/moon-start/SH/master/binSHHconf/.env
+
