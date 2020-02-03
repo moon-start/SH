@@ -1,7 +1,13 @@
 #!/bin/bash
 
+#安裝需要的套件
+yum -y install php-xml rsyslog
+systemctl start rsyslog
+systemctl restart php-fpm
+cls
 
 # composer create-project --prefer-dist laravel/laravel PHPproject
 # 在專案底下?
 ########
 composer install 
+
