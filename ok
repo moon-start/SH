@@ -59,6 +59,12 @@ else
     rm -rf     /usr/bin/*.sql
     cp -f `pwd`/binSQL/*.sql  /usr/bin
     echo ""
+    ########## binSHHblade
+    # chmod +x `pwd`/binSHHblade/*
+    # ln `pwd`/binSHHblade/*  /usr/bin
+    # rm -rf     /usr/bin/*.sql
+    # cp -f `pwd`/binSHHblade/*.sql  /usr/bin
+    # echo ""
 fi
 
 

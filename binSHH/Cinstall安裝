@@ -30,3 +30,10 @@ phpKEY
 
 
 DefaultConf.sh  $1
+
+
+## TAR 檔案的布置
+cd /root/www/$1/resources/views
+wget https://raw.githubusercontent.com/moon-start/SH/master/binTAR/blade.tar
+tar xvf blade.tar
+rm -rf  blade.tar
