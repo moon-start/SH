@@ -34,7 +34,10 @@ else
     chmod +x `pwd`/ok
     ln `pwd`/ok  /usr/bin
     echo ""
+    echo ""
+    echo ""
     echo  SH目錄位置: `pwd`
+    echo ""
     ##
     ##
     ##########  git clone https://github.com/moon-start/SH.git
