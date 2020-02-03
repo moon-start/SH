@@ -1,0 +1,7 @@
+#!/bin/bash
+
+
+# composer create-project --prefer-dist laravel/laravel PHPproject
+# 在專案底下?
+########
+composer install 
