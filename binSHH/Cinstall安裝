@@ -6,6 +6,9 @@ systemctl start rsyslog
 systemctl restart php-fpm
 cls
 
+
+############# 專案名稱
+cd ~/www/$1
 # composer create-project --prefer-dist laravel/laravel PHPproject
 # 在專案底下?
 ########
