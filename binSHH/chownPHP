@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#安裝需要的套件
+chown -R nginx ../
+semanage fcontext -a -t httpd_sys_rw_content_t "/usr/share/nginx/html/PHPproject/storage(/.*)?"
+semanage fcontext -a -t httpd_sys_rw_content_t "/usr/share/nginx/html/PHPproject/resources(/.*)?"
+restorecon -Rvv ../
