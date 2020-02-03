@@ -3,6 +3,4 @@
 
 
 ############# 專案名稱
-cd ~/www/$1
-
 php artisan make:controller $1Controller --resource --model=$1
