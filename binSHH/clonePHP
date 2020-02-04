@@ -15,23 +15,24 @@ cd ~/www/$1
 composer install 
 
 
-
+### 指令設計 在composer專案 
+###################### 建議寫在XP專案 一起上傳
 ## 在專案頂層目錄
 rm -rf  .env
 wget https://raw.githubusercontent.com/moon-start/SH/master/binSHHconf/.env
-
 ## 修改權限
 chownPHP $1
-
-
 ## 更新KEY
 phpKEY
 
 
-
+## 改變 nginx 的default.conf
 DefaultConf.sh  $1
+ln -s /usr/share/nginx/html/Admin  /root/www/laravel/public
 
 
+
+## blade.tar CSS
 ## TAR 檔案的布置
 cd /root/www/$1/resources/views
 wget https://raw.githubusercontent.com/moon-start/SH/master/binTAR/blade.tar
