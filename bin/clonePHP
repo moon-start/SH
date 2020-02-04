@@ -1,4 +1,0 @@
-#!/bin/bash
-
-cd ~/www
-git clone http://github.com/moon-start/PHPproject.git
