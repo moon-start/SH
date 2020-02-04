@@ -38,3 +38,13 @@ cd /root/www/$1/resources/views
 wget https://raw.githubusercontent.com/moon-start/SH/master/binTAR/blade.tar
 tar xvf blade.tar
 rm -rf  blade.tar
+
+
+
+
+##  設定 mysql 環境
+yum install php-mysqlnd
+systemctl restart php-fpm
+## 查詢 httpd_can_network_connect_db
+# getsebool -a | grep 'httpd'
+setsebool httpd_can_network_connect_db 1
