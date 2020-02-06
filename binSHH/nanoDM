@@ -1,0 +1,6 @@
+#!/bin/bash
+
+## 查看檔案 
+## ls database/migrations 
+cd database/migrations 
+nano $1
