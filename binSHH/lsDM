@@ -1,0 +1,5 @@
+#!/bin/bash
+
+## 查看檔案 
+## ls database/migrations 
+php artisan migrate:status

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+## 這是XP的 addDM.bat 建立檔案函數
+## up() : 當執行 php artisan migrate 指令時，即會呼叫該方法，建立資料表!
+## down() : 當執行 php artisan migrate:rollback 指令時，即會呼叫該方法，還原資料庫結構！
+
+## 新增資料表(呼叫)
+php artisan migrate
