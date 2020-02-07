@@ -6,3 +6,10 @@
 
 ## 新增資料表(呼叫)
 php artisan migrate
+
+
+## 增加了3個表格(額外)
+# customers[自訂]
+# failed_jobs
+# password_resets
+# users
