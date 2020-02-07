@@ -8,6 +8,8 @@
 php artisan migrate
 
 
+
+## database/migrations
 ## 增加了3個表格(額外)
 # customers[自訂]
 # failed_jobs
