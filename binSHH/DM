@@ -1,0 +1,23 @@
+#!/bin/bash
+
+## 查看檔案 
+## ls database/migrations 
+
+
+if [ "$#" = "0" ]
+then
+    # sh ok `pwd`
+    ####################
+    ####################
+    ### 沒有 len()==0 時
+    php artisan migrate:status
+else
+    ## 查看檔案 
+    ## ls database/migrations 
+    cd database
+    cd migrations
+    cls 
+    nano $1.php
+fi
+
+
