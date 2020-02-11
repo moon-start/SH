@@ -1,0 +1,22 @@
+#!/bin/bash
+
+## 查看檔案 
+## ls database/migrations 
+
+
+if [ "$#" = "0" ]
+then
+    cd ./app
+    cd ./Http
+    cd ./Controllers
+    cls
+    dir
+else
+    cd ./app
+    cd ./Http
+    cd ./Controllers
+    cls
+    nano $1
+fi
+
+
