@@ -1,0 +1,17 @@
+#!/bin/bash
+
+## 查看檔案 
+## ls database/migrations 
+
+
+if [ "$#" = "0" ]
+then
+    cd ./routes
+    cls
+    nano web.php
+else
+    cls
+    #nano $1
+fi
+
+
