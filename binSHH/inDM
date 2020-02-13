@@ -17,3 +17,8 @@ php artisan migrate
 # failed_jobs
 # password_resets
 # users
+
+
+## 這一行解決 資料庫權限
+## SQLSTATE [HY000] [2002]權限被拒絕
+setsebool httpd_can_network_connect_db 1
