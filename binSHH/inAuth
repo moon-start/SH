@@ -1,0 +1,10 @@
+#!/bin/bash
+
+## 專案底下
+composer require laravel/ui
+php artisan ui vue --auth
+
+composer install npm
+yum install nodejs
+
+npm install && npm run dev
