@@ -42,10 +42,11 @@ restorecon -Rvv ../
 
 ## 更新KEY
 phpKEY
-## [改變 nginx] 的default.conf
+## [改變 nginx]的 default.conf
 DefaultConf.sh  $1
 ln -s /usr/share/nginx/html/Admin  /root/www/laravel/public
-
+## admin
+inAdmin   /root/www/laravel/public
 
 
 ## 不太適合用 wget ...改用 git clone?

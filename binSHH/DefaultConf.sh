@@ -11,3 +11,7 @@ sed -i "s/專案名稱/$1/g"  default.conf
 
 nginx -t
 nginx -s reload
+
+
+
+## 改變admin

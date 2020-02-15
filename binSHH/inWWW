@@ -10,7 +10,7 @@ inPHP
 
 inMysql
 
-inAdmin
+inAdmin   /usr/share/nginx/html
 
 
 
