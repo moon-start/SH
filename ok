@@ -15,6 +15,10 @@
 ### 前置 專案
 # yum -y install git
 # git clone http://github.com/moon-start/SH.git
+### 修改 主機名稱
+# hostnamectl set-hostname Moon
+### 查看
+# hostname
 
 
 
