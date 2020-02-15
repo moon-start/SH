@@ -1,0 +1,22 @@
+#!/bin/bash
+
+
+
+## 基礎
+
+inNginx
+
+inPHP
+
+inMysql
+
+inAdmin
+
+
+
+## laravel
+
+inComposer
+
+
+clone laravel

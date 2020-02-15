@@ -9,3 +9,10 @@ wget https://getcomposer.org/installer -O composer-installer.php
 ## root 使用者
 php composer-installer.php --filename=composer --install-dir=/usr/bin
 rm -rf composer-installer.php
+
+
+
+
+cls
+## 查看 版本
+composer --version

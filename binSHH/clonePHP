@@ -32,7 +32,14 @@ wget https://raw.githubusercontent.com/moon-start/SH/master/binSHHconf/.env
 
 
 ## 修改權限
-chownPHP $1
+# chownPHP $1
+#### 修改目錄的 權限
+chown -R nginx ../
+semanage fcontext -a -t httpd_sys_rw_content_t "/usr/share/nginx/html/$1/storage(/.*)?"
+semanage fcontext -a -t httpd_sys_rw_content_t "/usr/share/nginx/html/$1/resources(/.*)?"
+restorecon -Rvv ../
+
+
 ## 更新KEY
 phpKEY
 ## [改變 nginx] 的default.conf

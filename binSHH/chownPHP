@@ -1,7 +1,0 @@
-#!/bin/bash
-
-#### 修改目錄的 權限
-chown -R nginx ../
-semanage fcontext -a -t httpd_sys_rw_content_t "/usr/share/nginx/html/$1/storage(/.*)?"
-semanage fcontext -a -t httpd_sys_rw_content_t "/usr/share/nginx/html/$1/resources(/.*)?"
-restorecon -Rvv ../

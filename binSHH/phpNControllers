@@ -6,14 +6,18 @@
 
 if [ "$#" = "0" ]
 then
+    # sh ok `pwd`
+    ####################
+    ####################
+    ### 沒有 len()==0 時
     cd app
     cd Http
     cd Controllers
     cls
     dir  
-    #cls
-    #nano web.php
 else
+    ## 查看檔案 
+    ## ls database/migrations 
     cd app
     cd Http
     cd Controllers
