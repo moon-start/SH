@@ -1,4 +1,9 @@
 #!/bin/bash
+
+### 建立 資料庫moon
+sql_DATA.sh
+cls
+
 if [ "$#" = "0" ]
 then
     ## 這是XP的 addDM.bat 建立檔案函數
