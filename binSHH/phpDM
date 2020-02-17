@@ -25,7 +25,7 @@ then
     setsebool httpd_can_network_connect_db 1
 else
     cd ~/www
-    cd %1
+    cd $1
     cls 
     php artisan migrate
     setsebool httpd_can_network_connect_db 1
