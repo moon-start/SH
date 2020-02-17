@@ -28,6 +28,15 @@ then
     ## 這一行解決 資料庫權限
     ## SQLSTATE [HY000] [2002]權限被拒絕
     setsebool httpd_can_network_connect_db 1
+elif [ "$#" = "2" ]
+then
+    ## 2個參數 且是 pull
+    if [ "$2" = "pull" ]
+    then
+        php artisan migrate:rollback
+    else
+        echo "請輸出 pull 回到上一次的結構"
+    fi
 else
     cd ~/www
     cd $1
