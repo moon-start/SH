@@ -1,11 +1,12 @@
 #!/bin/bash
 
-### 建立 資料庫moon
-sql_DATA.sh
-cls
+
 
 if [ "$#" = "0" ]
 then
+    ### 建立 資料庫moon
+    sql_DATA.sh
+    cls
     ## 這是XP的 addDM.bat 建立檔案函數
     ## up() : 當執行 php artisan migrate 指令時，即會呼叫該方法，建立資料表!
     ## down() : 當執行 php artisan migrate:rollback 指令時，即會呼叫該方法，還原資料庫結構！
@@ -38,6 +39,10 @@ then
         echo "請輸出 pull 回到上一次的結構"
     fi
 else
+    ### 建立 資料庫moon
+    sql_DATA.sh
+    cls
+    ###################
     cd ~/www
     cd $1
     cls 
