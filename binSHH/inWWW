@@ -20,3 +20,13 @@ inComposer
 
 
 clonePHP laravel
+
+
+
+
+## 除錯
+# sudo tail -n 20 /var/log/nginx/error.log
+# 如何修復404找不到nginx的問題
+# 解答:
+# 重新啟動PHP
+# inPHP
