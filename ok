@@ -40,7 +40,7 @@ else
     echo ""
     echo ""
     echo ""
-    echo  SH位置: `pwd`
+    echo 位置: `pwd`
     echo ""
     ##
     ##
