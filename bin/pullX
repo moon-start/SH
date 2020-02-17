@@ -7,7 +7,7 @@
 if   [ "$#" = "0" ]
 then
     echo "請填入~!專案"
-elif [ "$#" = "2" ]
+elif [ "$#" = "1" ]
 then
     #################
     cd ~/www
@@ -16,4 +16,7 @@ then
     #################
     git reset --hard HEAD~
     git pull
+    echo ""
+    echo ""
+    echo "git pull [$1 結束]"
 fi
