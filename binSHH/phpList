@@ -5,7 +5,9 @@
 
 if    [ "$#" = "0" ]
 then
+    echo.
     echo "請填入~!專案"
+    echo.
     #php artisan route:list
 else  [ "$#" = "1" ]
     cd ~/www
