@@ -1,4 +1,19 @@
 #!/bin/bash
 
 
+
+
+
 php artisan route:list
+
+
+
+if    [ "$#" = "0" ]
+then
+    php artisan route:list
+else  [ "$#" = "1" ]
+    cd ~/www
+    cd $1
+    cls 
+    php artisan route:list
+fi
