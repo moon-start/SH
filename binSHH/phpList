@@ -10,7 +10,8 @@ php artisan route:list
 
 if    [ "$#" = "0" ]
 then
-    php artisan route:list
+    echo "請填入~!專案"
+    #php artisan route:list
 else  [ "$#" = "1" ]
     cd ~/www
     cd $1
