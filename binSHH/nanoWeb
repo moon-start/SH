@@ -10,7 +10,9 @@ then
     cls
     nano web.php
 else
-    cls
+    # ## 專案 位置
+    ############# 專案名稱
+    nano ~/www/$1/routes/web.php
     #nano $1
 fi
 
