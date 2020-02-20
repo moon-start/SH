@@ -15,7 +15,10 @@ then
 
     ## 修改檔案
     mv      default.B.conf   default.conf
-    sed -i "s/專案名稱/$1/g"  default.conf
+
+    ## 範本 echo ${$1/AA/BB}
+    sum =   ${$1///}
+    sed -i "s/專案名稱/$sum/g"  default.conf
 
     nginx -t
     nginx -s reload
