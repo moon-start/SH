@@ -64,7 +64,7 @@
 if [ "$#" = "0" ]
 then
     echo ""
-    echo "phpDM 專案"
+    echo "www> phpDM 專案"
     echo ""
 elif [ "$#" = "1" ]
 then
