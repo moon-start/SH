@@ -24,7 +24,7 @@ then
     # echo ${var%%/*}
     var = $1
     ########################## 要留意的是，跟PHP或Python等不同，在等號（=）前後不可以加入空間。
-    sum=`echo ${var%%/*}`
+    sum=$(echo ${var%%/*})
     sed -i "s/專案名稱/$sum/g"  default.conf
 
     nginx -t
