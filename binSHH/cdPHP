@@ -1,10 +1,26 @@
 #!/bin/bash
 
 
-## Nginx目錄 設定檔
-## [改變 nginx]的 default.conf
-DefaultConf.sh  $1
+## 使用
+# cdPHP PHPproject
+## 錯誤(sed會失敗)
+# cdPHP PHPproject/
+ 
 
+## 使用2(自動跳出tab)
+# 1. cdPHP
+# 2. cdPHP  PHP..
+
+
+if [ "$#" = "0" ]
+then
+    cd ~/www
+elif [ "$#" = "2" ]
+then
+    ## Nginx目錄 設定檔
+    ## [改變 nginx]的 default.conf
+    DefaultConf.sh  $1
+fi
 
 
 
