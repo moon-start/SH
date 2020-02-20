@@ -30,7 +30,7 @@ then
     nginx -s reload
     cls    
     echo ""
-    echo "執行結束: 目前是 $1 專案"
+    echo "執行結束: 目前是 $sum 專案"
     echo ""
 fi
 
