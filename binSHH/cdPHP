@@ -6,7 +6,7 @@
 if [ "$#" = "0" ]
 then
     cd ~/www
-elif [ "$#" = "2" ]
+elif [ "$#" = "1" ]
 then
     ## 改變 nginx
     cd  /etc/nginx/conf.d
@@ -21,7 +21,7 @@ then
     nginx -s reload
     cls    
     echo ""
-    echo "執行結束"
+    echo "執行結束: 目前是 $1 專案"
     echo ""
 fi
 

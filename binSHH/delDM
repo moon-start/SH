@@ -8,22 +8,18 @@
 
 
 
-# if [ "$#" = "0" ]
-# then
-#     cd ~/www
-# elif [ "$#" = "2" ]
-# then
-#     cd $1
-#     ## 回復到上一個版本的資料庫結構
-#     ## 呼叫 所有的down 
-#     php artisan migrate:rollback
-# fi
-################################################ 無法使用
+if [ "$#" = "0" ]
+then
+    cd ~/www
+elif [ "$#" = "1" ]
+then
+    cd $1
+    ## 回復到上一個版本的資料庫結構
+    ## 呼叫 所有的down 
+    php artisan migrate:rollback
+fi
+############################################### 無法使用
 
 
 
 
-
-## 回復到上一個版本的資料庫結構
-## 呼叫 所有的down 
-php artisan migrate:rollback
