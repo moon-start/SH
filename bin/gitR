@@ -1,4 +1,18 @@
 #!/bin/bash
 
 
-git remote -v
+
+
+
+if   [ "$#" = "0" ]
+then
+    git remote -v
+elif [ "$#" = "1" ]
+then
+    #################
+    cd ~/www
+    cd $1
+    cls
+    #################
+    git remote -v
+fi

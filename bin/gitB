@@ -1,3 +1,17 @@
 #!/bin/bash
 
-git branch -v
+
+
+
+if   [ "$#" = "0" ]
+then
+    git branch -v
+elif [ "$#" = "1" ]
+then
+    #################
+    cd ~/www
+    cd $1
+    cls
+    #################
+    git branch -v
+fi
