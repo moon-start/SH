@@ -17,7 +17,13 @@ then
     mv      default.B.conf   default.conf
 
     ## 範本 echo ${$1/AA/BB}
-    sum =   ${$1///}
+    #### string="This is a testing"   ## 第4組
+    #### substr=$(echo $string | cut -d" " -f 4)
+    
+    ###  %% 號擷取，刪除右邊字元，保留左邊字元
+    # echo ${var%%/*}
+    var = $1
+    sum = $(echo ${var%%/*})
     sed -i "s/專案名稱/$sum/g"  default.conf
 
     nginx -t
