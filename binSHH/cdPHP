@@ -28,7 +28,7 @@ then
     var=$1
     # sum=${var:0-1}
     sum=${var%%/*}
-    ####sed -i "s/專案名稱/$sum/g"  default.conf
+    sed -i "s/專案名稱/$sum/g"  default.conf
 
     nginx -t
     nginx -s reload
