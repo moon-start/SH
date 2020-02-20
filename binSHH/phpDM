@@ -63,12 +63,15 @@
 
 if [ "$#" = "0" ]
 then
-    cd ~/www
+    echo ""
+    echo "phpDM 專案"
+    echo ""
 elif [ "$#" = "1" ]
 then
     ### 建立 資料庫moon
     sql_DATA.sh
     cls
+    cd ~/www
     ## up() : 當執行 php artisan migrate 指令時，即會呼叫該方法，建立資料表!
     ## down() : 當執行 php artisan migrate:rollback 指令時，即會呼叫該方法，還原資料庫結構！
     ## 所有 up 呼叫  ## 產生資料表
