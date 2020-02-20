@@ -20,6 +20,9 @@ then
     ## Nginx目錄 設定檔
     ## [改變 nginx]的 default.conf
     DefaultConf.sh  $1
+    echo ""
+    echo "執行結束"
+    echo ""
 fi
 
 
