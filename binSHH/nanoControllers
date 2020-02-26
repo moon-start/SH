@@ -14,7 +14,11 @@ then
     cd Http
     cd Controllers
     cls
+    echo ""
+    echo "目前 Controllers 檔案"
+    echo ""
     dir  
+    echo ""
 else
     ## 查看檔案 
     ## ls database/migrations 
