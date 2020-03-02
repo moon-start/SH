@@ -1,11 +1,19 @@
 #!/bin/bash
 
 
+
+### 生成檔案
+### App\Http\Controllers\Auth
+php artisan make:auth
+
+
 ## 專案底下
 cd $1
 ## 安裝 ul
+## [npm install && npm run dev]  需要下面的這一個先跑
 composer require laravel/ui
 ## 使用 ul
+## 產生............[auth/login.blade.php ..等等文件
 php artisan ui vue --auth
 
 
@@ -25,5 +33,7 @@ composer require npm
 #yum install nodejs
 
 
-## 安裝 相關的檔案
+## 安裝 相關的檔案 [app.css ... app.js]
+#/css/app.css   177 KiB  /js/app  [emitted]  /js/app
+#/js/app.js  1.39 MiB  /js/app  [emitted]  /js/app
 npm install && npm run dev

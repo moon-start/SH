@@ -8,6 +8,12 @@
 # phpDM laravel       
 
 
+
+
+## 如果有getcwd cannot access parent directories错误
+## 解决方法
+## 重新回到...此路徑
+
 if [ "$#" = "0" ]
 then
     ### 建立 資料庫moon
