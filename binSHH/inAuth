@@ -1,10 +1,29 @@
 #!/bin/bash
 
+
 ## 專案底下
+cd $1
+## 安裝 ul
 composer require laravel/ui
+## 使用 ul
 php artisan ui vue --auth
 
-composer install npm
-yum install nodejs
 
+# 安裝訊息
+# $ yum info epel-release
+# 安裝
+# $ yum install epel-release
+# 版本
+# $ node -v
+
+
+## 安裝npm
+## composer install npm ## 他建議下一行安裝
+composer require npm
+
+
+#yum install nodejs
+
+
+## 安裝 相關的檔案
 npm install && npm run dev
