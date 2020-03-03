@@ -34,5 +34,5 @@ var=$2
 echo ${var##*/}
 #echo $var
 
-scp   root@192.168.1.$1:$2   "C:\Users\moon\Desktop\laravel\"${var##*/}
+scp   root@192.168.1.$1:$2   C:\Users\moon\Desktop\laravel\\${var##*/}
 # scp  115  ./XXX.PHP
