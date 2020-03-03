@@ -1,12 +1,13 @@
-# #!/bin/bash
+#!/bin/bash
 
 
 
 #cd ..
 
-QQ=`pwd`
 
-echo $QQ
+## 取得上層目錄
+QQ=`pwd`
+echo ${var##*/}
 
 
 # # git reset --hard HEAD~
