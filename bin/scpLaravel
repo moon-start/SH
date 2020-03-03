@@ -1,0 +1,35 @@
+# #!/bin/bash
+
+
+# # git reset --hard HEAD~
+
+# # git pull
+
+
+
+# ### XP端
+# ### SSHD? 伺服器服務?
+# ### 這是CMD傳到 linux的  DOS指令
+# ###  複製到 linux
+# scp   c:/moon.sql  root@192.168.1.104:/root/SH/moon.sql
+# scp   c:\moon.sql  root@192.168.1.104:/root/SH/moon.sql
+
+
+# ###  複製 到桌面
+# scp   root@192.168.1.114:/root/SH/ok   C:\Users\moon\Desktop\ok
+# scp   root@192.168.1.114:/root/SH/composer-installer.php   C:\Users\moon\Desktop\composer-installer.php
+
+
+
+
+# ### linux端 ##失敗ㄥ
+# #scp  /root/SH/ok moon@192.168.1.101:C:\Users\moon\Desktop\ok
+
+
+# ## 讀取變數的 檔名
+# ## https://codertw.com/%E5%89%8D%E7%AB%AF%E9%96%8B%E7%99%BC/392050/
+var=$1
+echo ${var##*/}
+
+# scp   root@192.168.1.$1:/root/www/laravel/composer-installer.php   C:\Users\moon\Desktop\laravel\composer-installer.php
+# scp laravel 115
