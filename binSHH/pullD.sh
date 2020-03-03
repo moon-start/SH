@@ -1,6 +1,14 @@
 # #!/bin/bash
 
 
+
+#cd ..
+
+QQ=`pwd`
+
+echo $QQ
+
+
 # # git reset --hard HEAD~
 
 # # git pull
@@ -30,8 +38,9 @@
 #### ./檔名.php   --->  檔名.php
 ## 讀取變數的 檔名
 ## https://codertw.com/%E5%89%8D%E7%AB%AF%E9%96%8B%E7%99%BC/392050/
-var=$2
-echo ${var##*/}
+# var=$2
+# echo ${var##*/}
+
 #echo $var
 
 
