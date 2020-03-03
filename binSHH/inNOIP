@@ -22,3 +22,8 @@ make install
 ## moon-start.myftp.org  (預設30天)
 
 
+## 更新 分
+# /usr/local/scr
+
+echo "*/1 * * * * root noip2" >> /etc/crontab
+
