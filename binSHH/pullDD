@@ -7,7 +7,7 @@
 
 ## 取得上層目錄
 QQ=`pwd`
-echo ${var##*/}
+echo ${QQ##*/}
 
 
 # # git reset --hard HEAD~
