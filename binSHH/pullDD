@@ -17,5 +17,5 @@ rm -rf ./${QQ##*/}
 
 
 ## 下載
-##cloneX ${QQ##*/}
+cloneX ${QQ##*/}
 
