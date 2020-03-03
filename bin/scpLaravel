@@ -29,7 +29,8 @@
 # ## 讀取變數的 檔名
 # ## https://codertw.com/%E5%89%8D%E7%AB%AF%E9%96%8B%E7%99%BC/392050/
 var=$1
-echo ${var##*/}
+#echo ${var##*/}
+echo $var
 
 # scp   root@192.168.1.$1:/root/www/laravel/composer-installer.php   C:\Users\moon\Desktop\laravel\composer-installer.php
 # scp laravel 115
