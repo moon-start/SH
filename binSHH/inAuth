@@ -22,6 +22,8 @@ then
         cd ${QQ##*/}
         inAuth ${QQ##*/}
     else
+        cls
+        echo ""
         echo "請在 www 專案中(執行)"
     fi
 else
