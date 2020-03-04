@@ -32,7 +32,8 @@ else
     cd ~/www/$1
     ## 安裝 ul
     ## [npm install && npm run dev]  需要下面的這一個先跑
-    composer require laravel/ui
+    ## composer require laravel/ui     ## 方法A
+    composer require laravel/ui --dev  ## 方法B
     ## 使用 ul
     ## 產生............[auth/login.blade.php ..等等文件
     php artisan ui vue --auth
