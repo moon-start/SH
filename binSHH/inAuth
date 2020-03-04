@@ -7,33 +7,52 @@
 php artisan make:auth
 
 
-## 專案底下
-cd $1
-## 安裝 ul
-## [npm install && npm run dev]  需要下面的這一個先跑
-composer require laravel/ui
-## 使用 ul
-## 產生............[auth/login.blade.php ..等等文件
-php artisan ui vue --auth
+if [ "$#" = "0" ]
+then
+    ## echo "inAuth  專案名稱 "
+    ## 取得上層目錄
+    QQ=`pwd`
+    ## echo "刪除 ${QQ##*/} 專案"
+    ## 上上層目錄
+    cd ..
+    QB=`pwd`
+    ## echo "刪除 ${QB##*/} 專案"
+    if [ "${QB##*/}" = "www" ]
+    then
+        cd ${QQ##*/}
+        inAuth ${QQ##*/}
+    else
+        echo "請在 www 專案中(執行)"
+    fi
+else
+    ## 專案底下
+    cd $1
+    ## 安裝 ul
+    ## [npm install && npm run dev]  需要下面的這一個先跑
+    composer require laravel/ui
+    ## 使用 ul
+    ## 產生............[auth/login.blade.php ..等等文件
+    php artisan ui vue --auth
 
 
-# 安裝訊息
-# $ yum info epel-release
-# 安裝
-# $ yum install epel-release
-# 版本
-# $ node -v
+    # 安裝訊息
+    # $ yum info epel-release
+    # 安裝
+    # $ yum install epel-release
+    # 版本
+    # $ node -v
 
 
-## 安裝npm
-## composer install npm ## 他建議下一行安裝
-composer require npm
+    ## 安裝npm
+    ## composer install npm ## 他建議下一行安裝
+    composer require npm
 
 
-#yum install nodejs
+    #yum install nodejs
 
 
-## 安裝 相關的檔案 [app.css ... app.js]
-#/css/app.css   177 KiB  /js/app  [emitted]  /js/app
-#/js/app.js  1.39 MiB  /js/app  [emitted]  /js/app
-npm install && npm run dev
+    ## 安裝 相關的檔案 [app.css ... app.js]
+    #/css/app.css   177 KiB  /js/app  [emitted]  /js/app
+    #/js/app.js  1.39 MiB  /js/app  [emitted]  /js/app
+    npm install && npm run dev
+fi
