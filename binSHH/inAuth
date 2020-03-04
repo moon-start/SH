@@ -4,7 +4,8 @@
 
 ### 生成檔案
 ### App\Http\Controllers\Auth
-php artisan make:auth
+# 未定義 auth..??
+# php artisan make:auth
 
 
 if [ "$#" = "0" ]
@@ -28,7 +29,7 @@ then
     fi
 else
     ## 專案底下
-    cd $1
+    cd ~/www/$1
     ## 安裝 ul
     ## [npm install && npm run dev]  需要下面的這一個先跑
     composer require laravel/ui
