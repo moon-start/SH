@@ -6,6 +6,21 @@
 ### App\Http\Controllers\Auth
 # 未定義 auth..??
 # php artisan make:auth
+##############################
+### 被這個取代
+### composer require laravel/ui     ## 方法A
+### php artisan ui vue --auth
+
+
+
+#    composer.json
+#    "require": {
+#         "php": "^7.2",
+#         "fideloper/proxy": "^4.0",
+#         "laravel/framework": "^6.2",
+#         "laravel/tinker": "^2.0",
+#         "laravel/ui": "^1.2"
+#     },
 
 
 if [ "$#" = "0" ]
@@ -32,9 +47,9 @@ else
     cd ~/www/$1
     ## 安裝 ul
     ## [npm install && npm run dev]  需要下面的這一個先跑
-    ## composer require laravel/ui     ## 方法A
-    composer require laravel/ui --dev --no-update ## 方法B
-    composer update
+    composer require laravel/ui     ## 方法A
+    ## composer require laravel/ui --dev  ## 方法B
+    ## composer update ## --no-update??
     ## 使用 ul
     ## 產生............[auth/login.blade.php ..等等文件
     php artisan ui vue --auth
