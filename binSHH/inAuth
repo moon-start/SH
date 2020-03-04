@@ -48,14 +48,21 @@ else
     ## 安裝 ul
     ## [npm install && npm run dev]  需要下面的這一個先跑
     ## composer require laravel/ui     ## 方法A
+    composer update
+    composer dump-autoload
     composer require laravel/ui --dev  ## 方法B
     ## 如果錯誤修改這個   composer.json  "require": 
     ## 使用 ul
+    ## 專案/resources/views/auth
     ## 產生............[auth/login.blade.php ..等等文件
     php artisan ui vue --auth
 
-
-    ##php artisan ui bootstrap --auth
+    # 建立含有使用者認證的框架（bootstrap 版本）
+    # php artisan ui bootstrap --auth
+    # 建立含有使用者認證的框架（vue 版本）
+    # php artisan ui vue --auth
+    # 建立含有使用者認證的框架（React 版本）
+    # php artisan ui react --auth
     
 
     # 安裝訊息
