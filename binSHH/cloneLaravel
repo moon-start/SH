@@ -105,25 +105,36 @@ php artisan key:generate
 ##  設定 mysql 環境
 yum install php-mysqlnd
 systemctl restart php-fpm
-## 查詢 httpd_can_network_connect_db
-# getsebool -a | grep 'httpd'
 setsebool httpd_can_network_connect_db 1
 
-###############
+
+
+
+########################
 ############### 安裝 Auth
+## composer.json ########
 composer update
+#########################
 composer dump-autoload
 composer require laravel/ui --dev  ## 方法B
-## 如果錯誤修改這個   composer.json  "require": 
-## 使用 ul
-## 專案/resources/views/auth
+
+
 ## 產生............[auth/login.blade.php ..等等文件
+## 已經存在..??
 php artisan ui vue --auth
-composer require npm
-#yum install nodejs
-## 安裝 相關的檔案 [app.css ... app.js]
-#/css/app.css   177 KiB  /js/app  [emitted]  /js/app
-#/js/app.js  1.39 MiB  /js/app  [emitted]  /js/app
+
+
+############# 安裝 npm
+# 安裝訊息
+# $ yum info epel-release
+# 安裝
+yum -y install epel-release
+yum -y install nodejs
+# 版本
+# $ node -v
+############# npm 指令安裝完成
+
+
 npm install && npm run dev
 
 
