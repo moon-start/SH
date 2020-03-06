@@ -9,6 +9,12 @@ wget https://raw.githubusercontent.com/moon-start/SH/master/binSHHconf/default.B
 mv      default.B.conf   default.conf
 sed -i "s/專案名稱/$1/g"  default.conf
 
+
+
+## 下載 nginx.conf (如果缺少)
+cd ..
+wget https://raw.githubusercontent.com/moon-start/SH/master/binSHHconf/nginx.conf
+
 nginx -t
 nginx -s reload
 
