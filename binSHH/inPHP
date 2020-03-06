@@ -68,4 +68,4 @@ systemctl restart php-fpm
 
 
 ### 這個可以查看 PHP服務 目前發生什麼問題
-systemctl status php-fpm.service -l
+#systemctl status php-fpm.service -l
