@@ -1,0 +1,7 @@
+#!/bin/bash
+
+### Laravel 版本
+php artisan | grep "Laravel Framework"
+echo ""
+
+
