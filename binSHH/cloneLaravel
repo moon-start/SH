@@ -119,9 +119,10 @@ composer dump-autoload
 composer require laravel/ui --dev  ## 方法B
 
 
-## 產生............[auth/login.blade.php ..等等文件
-## 已經存在..??
-php artisan ui vue --auth
+## 產生............[auth/login.blade.php ..等等文件  The [layouts/app.blade.php] v
+## 已經存在..??               
+#php artisan ui vue --auth   ## 這個會中斷?
+###
 
 
 ############# 安裝 npm
