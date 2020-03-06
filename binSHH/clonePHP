@@ -35,6 +35,9 @@ rm -rf  .env
 wget https://raw.githubusercontent.com/moon-start/SH/master/binSHHconf/.env
 
 
+clone配置.sh
+
+
 ## 修改權限
 # chownPHP $1
 #### 修改目錄的 權限

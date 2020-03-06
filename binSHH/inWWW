@@ -18,8 +18,9 @@ inAdmin   /usr/share/nginx/html
 
 inComposer
 
+## 重新修改一次
+clone配置.sh
 
-clonePHP laravel
 
 
 
