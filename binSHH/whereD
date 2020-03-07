@@ -1,12 +1,25 @@
 #!/bin/bash
 
+
+
+######
+## 成功
+## QQ變數
+## $2 臨時切換變數 
+############################
 if   [ "$#" = "2" ]
 then
     cd $2
-    echo "666"
-# elif [ "$#" = "1" ]
-    
+    QQ=`pwd`
+    find $QQ -type d -name $1
+elif [ "$#" = "1" ]
+    QQ=`pwd`
+    find $QQ -type d -name $1
+else
+    echo "指令 [XX]  [指定path]"
 fi
+
+
 
 
 
@@ -17,12 +30,6 @@ fi
 #     # 目錄 /path/to/dir 不存在
 #     echo "Directory /path/to/dir does not exists."
 # fi
-
-
-QQ=`pwd`
-echo "$QQ"
-find $QQ -type d -name $1
-
 
 ## 取得上層目錄
 # QQ=`pwd`
