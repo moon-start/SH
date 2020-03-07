@@ -67,3 +67,11 @@ else
     # 檔案 /path/to/dir/filename 不存在
     echo "File /path/to/dir/filename does not exists."
 fi
+
+
+
+## 參數長度
+if   [ "$#" = "0" ]
+then
+    echo "請填入~!專案"
+elif [ "$#" = "1" ]

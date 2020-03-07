@@ -1,11 +1,27 @@
 #!/bin/bash
 
+if   [ "$#" = "2" ]
+then
+    cd $2
+    echo "666"
+# elif [ "$#" = "1" ]
+    
+fi
 
 
-#cd ..
+
+# if [ -d "/path/to/dir" ]; then
+#     # 目錄 /path/to/dir 存在
+#     echo "Directory /path/to/dir exists."
+# else
+#     # 目錄 /path/to/dir 不存在
+#     echo "Directory /path/to/dir does not exists."
+# fi
 
 
-find `pwd` -type d -name $1
+QQ=`pwd`
+echo "$QQ"
+find $QQ -type d -name $1
 
 
 ## 取得上層目錄
