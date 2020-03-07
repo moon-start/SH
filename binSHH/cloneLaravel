@@ -151,11 +151,11 @@ npm install bootstrap
 # npm -install
 # 這時候如果執行
 # npm run dev
-# 就會進行編譯，把 \resources\assets\sass 內的資料編譯後儲存在
+# 就會進行編譯，把 \resources\sass 內的資料編譯後儲存在
 # \public 對應的資料夾下，詳細設定可以在 \webpack.mix.js 中看到
 npm install && npm run dev
 # 接下來我們把之前的 css 檔案直接複製貼上到
-# \resources\assets\sass\app.scss
+# \resources\sass\app.scss    ---------------貼到檔案中--只編譯  app.scss檔案....產生 public/css/app.css
 # 再進行一次 npm run dev 編譯
 # 記得把 view 引入的 CSS路徑更新！
 
