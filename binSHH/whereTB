@@ -7,7 +7,7 @@
 
 
 # !find `pwd` -name *.cnf -exec grep -l -F "[mysqldump]" {} \; 
-find `pwd` -name *.cnf -exec grep -l -F "$1" {} \; 
+find `pwd` -type f  -exec grep -l -F "$1" {} \; 
 
 ## 取得上層目錄
 # QQ=`pwd`
