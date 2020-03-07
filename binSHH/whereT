@@ -6,7 +6,7 @@
 
 
 
-find `pwd` -exec grep -H "$1" {} \;  
+find `pwd` -type f -exec grep -H "$1" {} \;  
 
 
 ## 取得上層目錄
