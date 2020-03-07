@@ -5,9 +5,11 @@
 #cd ..
 
 
+## TB ## /root/www/laravel/aaa.txt:123999
+## T ## /root/www/laravel/aaa.txt
 
-find `pwd` -type f -exec grep -H "$1" {} \;  
-
+# !find `pwd` -name *.cnf -exec grep -l -F "[mysqldump]" {} \; 
+find `pwd` -type f  -exec grep -l -F "$1" {} \; 
 
 ## 取得上層目錄
 # QQ=`pwd`
