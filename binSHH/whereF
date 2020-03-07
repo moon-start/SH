@@ -16,7 +16,7 @@ then
     QQ=`pwd`
     find $QQ -type f -name $1
 else
-    echo "指令 [XX]  [指定path]"
+    echo "指令 [檔案XX]  [指定path]"
     echo ""
     echo ""
 fi

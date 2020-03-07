@@ -17,7 +17,7 @@ then
     QQ=`pwd`
     find $QQ -type d -name $1
 else
-    echo "指令 [XX]  [指定path]"
+    echo "指令 [目錄XX]  [指定path]"
     echo ""
     echo ""
 fi
