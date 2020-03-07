@@ -1,0 +1,28 @@
+#!/bin/bash
+
+
+
+#cd ..
+
+
+
+# !find `pwd` -name *.cnf -exec grep -l -F "[mysqldump]" {} \; 
+find `pwd` -name *.cnf -exec grep -l -F "$1" {} \; 
+
+## 取得上層目錄
+# QQ=`pwd`
+# echo "刪除 ${QQ##*/} 專案"
+
+
+
+# ## 刪除
+# cd ..
+# rm -rf ./${QQ##*/}
+
+
+# ## 下載
+# cloneX ${QQ##*/}
+
+
+# find . -name gtwang.txt
+

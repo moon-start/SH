@@ -86,6 +86,11 @@ else
     # $ node -v
     ############# npm 指令安裝完成
 
+    ### 找不到要導入的樣式表。
+    ### // Bootstrap
+    ### @import '~bootstrap/scss/bootstrap';
+    ### App.scss
+    npm install bootstrap
 
     ## 安裝npm
     ## composer install npm ## 他建議下一行安裝

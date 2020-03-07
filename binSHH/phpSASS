@@ -2,7 +2,7 @@
 
 ### 編譯，把 \resources\assets\sass 
 echo "編譯scss，專案/resources/sass目錄。"
-npm run dev
+npm install && npm run dev
 echo "產生css，於\public\css的資料夾下，"
 
 
