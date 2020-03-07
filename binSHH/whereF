@@ -12,6 +12,7 @@ then
     QQ=`pwd`
     find $QQ -type f -name $1
 elif [ "$#" = "1" ]
+then
     QQ=`pwd`
     find $QQ -type f -name $1
 else
