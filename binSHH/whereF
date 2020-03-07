@@ -17,6 +17,8 @@ then
     find $QQ -type f -name $1
 else
     echo "指令 [XX]  [指定path]"
+    echo ""
+    echo ""
 fi
 
 
