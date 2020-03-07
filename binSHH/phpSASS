@@ -1,5 +1,15 @@
 #!/bin/bash
 
+
+##############################################
+### 找不到要導入的樣式表。
+### // Bootstrap
+### @import '~bootstrap/scss/bootstrap';
+### App.scss
+### 產生失敗 /css/app.css 
+npm install bootstrap
+##########################################
+cls 
 ### 編譯，把 \resources\assets\sass 
 echo "編譯scss，專案/resources/sass目錄。"
 npm install && npm run dev
