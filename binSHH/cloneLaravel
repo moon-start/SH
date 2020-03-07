@@ -135,9 +135,24 @@ yum -y install nodejs
 # $ node -v
 ############# npm 指令安裝完成
 
-
+# 初始化套件
+# npm -install
+# 這時候如果執行
+# npm run dev
+# 就會進行編譯，把 \resources\assets\sass 內的資料編譯後儲存在
+# \public 對應的資料夾下，詳細設定可以在 \webpack.mix.js 中看到
 npm install && npm run dev
+# 接下來我們把之前的 css 檔案直接複製貼上到
+# \resources\assets\sass\app.scss
+# 再進行一次 npm run dev 編譯
+# 記得把 view 引入的 CSS路徑更新！
 
+# 如此作法，我們每次更改 CSS 都要重新編譯，這樣不是很麻煩嗎？
+# 當然有解決的方法！
+# npm run wstch
+# 這個指令定義可以在 \package.json 中找到
+# 之後 SASS會自行偵測是否有改動SCSS檔案，並且重新編譯
+# 這樣用起來就和以前直接改CSS檔案一樣了呢！
 
 
 ########
@@ -145,5 +160,6 @@ npm install && npm run dev
 ########
 ######## CREATE DATABASE moon;
 ######## DROP DATABASE `moon`;
+### inDM <<<
 php artisan migrate
 setsebool httpd_can_network_connect_db 1
