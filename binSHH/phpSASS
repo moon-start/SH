@@ -11,9 +11,9 @@ QQ=${QQ##*/}
 if   [ -f "`pwd`/package.json" ]; then
     # 檔案 /path/to/dir/filename 存在
     echo "存在A."
-elif [ -f "`pwd`/composer.json" ]; then
-    # 檔案 /path/to/dir/filename 存在
-    echo "存在B."
+    if [ -f "`pwd`/composer.json" ]; then
+        # 檔案 /path/to/dir/filename 存在
+        echo "存在B."
 else
     # 檔案 /path/to/dir/filename 不存在
     echo "does not exists."
