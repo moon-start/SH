@@ -47,8 +47,10 @@ then
         echo ""
     fi
 else
+    clear
     echo ""
     echo "cd /etc/nginx 失敗"
+    echo ""
     echo "請確認 nginx 安裝!!"
     echo ""
 fi
