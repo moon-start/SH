@@ -234,8 +234,8 @@ else
     echo "說明 [指令]  [資料庫]"
     echo ""
     echo "[其他自動填入]  [nginx root] /usr/share/nginx/html/" 
-    echo "               [port] 3306" 
-    echo "               [mysql使用者] root" 
-    echo "               [mysql密碼] hello123"
+    echo "                 [port] 3306" 
+    echo "                 [mysql使用者] root" 
+    echo "                 [mysql密碼] hello123"
     echo ""
 fi
