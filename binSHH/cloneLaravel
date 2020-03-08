@@ -229,9 +229,9 @@ then
     setsebool httpd_can_network_connect_db 1
 else
     echo ""
-    echo "說明 [指令] [nginx root] [port] [資料庫] [mysql使用者] [mysql密碼]"
+    echo "說明1 [指令] [nginx root] [port] [資料庫] [mysql使用者] [mysql密碼]"
     echo ""
-    echo "說明 [指令]  [資料庫]"
+    echo "說明2 [指令]  [資料庫]"
     echo ""
     echo "                [其他自動填入]"   
     echo "                [nginx root] /usr/share/nginx/html/" 
