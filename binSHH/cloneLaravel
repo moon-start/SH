@@ -19,10 +19,10 @@ then
 
 
     ## 安裝 composer
-    yum install wget
-    wget https://getcomposer.org/installer -O composer-installer.php
-    php composer-installer.php --filename=composer --install-dir=/usr/bin
-    rm -rf composer-installer.php
+    # yum install wget
+    # wget https://getcomposer.org/installer -O composer-installer.php
+    # php composer-installer.php --filename=composer --install-dir=/usr/bin
+    # rm -rf composer-installer.php
 
 
     ## 用法
