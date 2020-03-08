@@ -81,3 +81,33 @@ if   [ "$#" = "0" ]
 then
     echo "請填入~!專案"
 elif [ "$#" = "1" ]
+
+
+
+
+
+
+
+
+
+
+
+##
+## 取得上層目錄
+QQ=`pwd`
+QQ=${QQ##*/}
+
+if   [ -f "`pwd`/package.json" ]; then
+    # 檔案 /path/to/dir/filename 存在
+    echo "存在A."
+    if [ -f "`pwd`/composer.json" ]; then
+        # 檔案 /path/to/dir/filename 存在
+        echo "存在B."
+        if [ -f "`pwd`/.env" ]; then
+            # 檔案 /path/to/dir/filename 存在
+            echo "存在C."
+        fi
+    fi
+else
+    # 檔案 /path/to/dir/filename 不存在
+    echo "(位置
