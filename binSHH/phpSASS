@@ -14,6 +14,7 @@ if   [ -f "`pwd`/package.json" ]; then
     if [ -f "`pwd`/composer.json" ]; then
         # 檔案 /path/to/dir/filename 存在
         echo "存在B."
+    fi
 else
     # 檔案 /path/to/dir/filename 不存在
     echo "does not exists."
