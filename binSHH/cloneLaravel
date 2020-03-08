@@ -63,6 +63,13 @@ then
     ## 更新KEY
     php artisan key:generate
 
+    ## 1.首先關閉artisan服務器並更改.env文件並運行以下命令
+    php artisan cache:clear
+    php artisan config:clear
+    php artisan route:clear
+    
+    # 然後運行 http://127.0.0.1:8000
+    # php artisan serve   # 不需要這行
 
 
     # ######  不要使用了

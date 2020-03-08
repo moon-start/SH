@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 ### 看这句提示，是因为缺少 package.json 这个文件。
 ### 初始化項目
 npm init -f
