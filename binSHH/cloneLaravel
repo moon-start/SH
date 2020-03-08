@@ -5,188 +5,212 @@
 # kill -9 15150
 
 
+## 取得上層目錄 #########
+QQ=`pwd`
+echo "刪除 ${QQ##*/} 專案"
+QQA=${QQ##*/}
 
-## 安裝 composer
-yum install wget
-wget https://getcomposer.org/installer -O composer-installer.php
-php composer-installer.php --filename=composer --install-dir=/usr/bin
-rm -rf composer-installer.php
-
-
-## 用法
-#clonePHP laravel
-
-## 修改 nginx配置
-
-## 修改 Nginx 目錄
-## 改變 nginx
-cd  /etc/nginx/conf.d
-rm -rf  ./*
-rm -rf  default.conf
-
-wget https://raw.githubusercontent.com/moon-start/SH/master/binSHHconf/default.C.conf
-
-## 修改檔案
-mv      default.C.conf   default.conf
-
-## 下載 nginx.conf
-cd ..
-rm -rf  ./nginx.conf
-wget https://raw.githubusercontent.com/moon-start/SH/master/binSHHconf/nginx.conf
-
-
-#### PHP設定檔
-rm -rf /etc/php-fpm.d/www.conf
-cd /etc/php-fpm.d
-wget https://raw.githubusercontent.com/moon-start/SH/master/binSHHconf/www.conf
-chmod 644 /etc/php-fpm.d/www.conf
-## cd ~/
-## 重新
-systemctl start php-fpm
-systemctl restart php-fpm
-
-nginx -t
-##################################
-# 避免 nginx: [error] invalid PID number "" in "/run/nginx.pid"
-nginx -c /etc/nginx/nginx.conf
-nginx -s reload
-
-
-#安裝需要的套件
-yum -y install php-xml rsyslog
-systemctl start rsyslog
-cls
-
-
-
-## 假設尚未安裝
-#cd ~/www
-#cloneX $1
-############# 專案名稱
-#cd ~/www/$1
-# composer create-project --prefer-dist laravel/laravel PHPproject
-# 在專案底下?
-########
-cd /usr/share/nginx/html/
-rm -rf ./laravel
-git clone https://github.com/moon-start/laravel.git
-cd ./laravel
-composer install 
-
-
-
-# DB_PORT=3306
-# DB_DATABASE=moon
-# DB_USERNAME=root
-# DB_PASSWORD=hello123
-## 不太適合用 wget ...改用 git clone?
-### 指令設計 在composer專案 
-###################### 建議寫在XP專案 一起上傳
-## 在專案頂層目錄
-rm -rf  .env
-wget https://raw.githubusercontent.com/moon-start/SH/master/binSHHconf/.env
-sed -i "s/DB_PORT/$1/g"      .env
-sed -i "s/DB_DATABAS/$2/g"   .env
-sed -i "s/DB_USERNAME/$3/g"  .env
-sed -i "s/DB_PASSWORD/$4/g"  .env
-
-## 修改權限
-# chownPHP $1
-#### 修改目錄的 權限
-chown -R nginx ../
-semanage fcontext -a -t httpd_sys_rw_content_t "/usr/share/nginx/html/laravel/storage(/.*)?"
-semanage fcontext -a -t httpd_sys_rw_content_t "/usr/share/nginx/html/laravel/resources(/.*)?"
-restorecon -Rvv ../
-
-
-## 更新KEY
-php artisan key:generate
-
-
-
-# ######  不要使用了
-# ######
-# ## 不太適合用 wget ...改用 git clone?
-# ## blade.tar CSS
-# ## TAR 檔案的布置
-# cd /root/www/$1/resources/views
-# wget https://raw.githubusercontent.com/moon-start/SH/master/binTAR/blade.tar
-# tar xvf blade.tar
-# rm -rf  blade.tar
+if   [ "$#" = "4" ]
+then
+########################
 
 
 
 
-##  設定 mysql 環境
-yum install php-mysqlnd
-systemctl restart php-fpm
-setsebool httpd_can_network_connect_db 1
+
+
+    ## 安裝 composer
+    yum install wget
+    wget https://getcomposer.org/installer -O composer-installer.php
+    php composer-installer.php --filename=composer --install-dir=/usr/bin
+    rm -rf composer-installer.php
+
+
+    ## 用法
+    #clonePHP laravel
+
+    ## 修改 nginx配置
+
+    ## 修改 Nginx 目錄
+    ## 改變 nginx
+    cd  /etc/nginx/conf.d
+    rm -rf  ./*
+    rm -rf  default.conf
+
+    wget https://raw.githubusercontent.com/moon-start/SH/master/binSHHconf/default.C.conf
+
+    ## 修改檔案
+    mv      default.C.conf   default.conf
+
+    ## 下載 nginx.conf
+    cd ..
+    rm -rf  ./nginx.conf
+    wget https://raw.githubusercontent.com/moon-start/SH/master/binSHHconf/nginx.conf
+
+
+    #### PHP設定檔
+    rm -rf /etc/php-fpm.d/www.conf
+    cd /etc/php-fpm.d
+    wget https://raw.githubusercontent.com/moon-start/SH/master/binSHHconf/www.conf
+    chmod 644 /etc/php-fpm.d/www.conf
+    ## cd ~/
+    ## 重新
+    systemctl start php-fpm
+    systemctl restart php-fpm
+
+    nginx -t
+    ##################################
+    # 避免 nginx: [error] invalid PID number "" in "/run/nginx.pid"
+    nginx -c /etc/nginx/nginx.conf
+    nginx -s reload
+
+
+    #安裝需要的套件
+    yum -y install php-xml rsyslog
+    systemctl start rsyslog
+    cls
+
+
+
+    ## 假設尚未安裝
+    #cd ~/www
+    #cloneX $1
+    ############# 專案名稱
+    #cd ~/www/$1
+    # composer create-project --prefer-dist laravel/laravel PHPproject
+    # 在專案底下?
+    ########
+    cd /usr/share/nginx/html/
+    rm -rf ./laravel
+    git clone https://github.com/moon-start/laravel.git
+    cd ./laravel
+    composer install 
+
+
+
+    # DB_PORT=3306
+    # DB_DATABASE=moon
+    # DB_USERNAME=root
+    # DB_PASSWORD=hello123
+    ## 不太適合用 wget ...改用 git clone?
+    ### 指令設計 在composer專案 
+    ###################### 建議寫在XP專案 一起上傳
+    ## 在專案頂層目錄
+    rm -rf  .env
+    wget https://raw.githubusercontent.com/moon-start/SH/master/binSHHconf/.env
+    sed -i "s/DB_PORT/$1/g"      .env
+    sed -i "s/DB_DATABAS/$2/g"   .env
+    sed -i "s/DB_USERNAME/$3/g"  .env
+    sed -i "s/DB_PASSWORD/$4/g"  .env
+
+    ## 修改權限
+    # chownPHP $1
+    #### 修改目錄的 權限
+    chown -R nginx ../
+    semanage fcontext -a -t httpd_sys_rw_content_t "/usr/share/nginx/html/laravel/storage(/.*)?"
+    semanage fcontext -a -t httpd_sys_rw_content_t "/usr/share/nginx/html/laravel/resources(/.*)?"
+    restorecon -Rvv ../
+
+
+    ## 更新KEY
+    php artisan key:generate
+
+
+
+    # ######  不要使用了
+    # ######
+    # ## 不太適合用 wget ...改用 git clone?
+    # ## blade.tar CSS
+    # ## TAR 檔案的布置
+    # cd /root/www/$1/resources/views
+    # wget https://raw.githubusercontent.com/moon-start/SH/master/binTAR/blade.tar
+    # tar xvf blade.tar
+    # rm -rf  blade.tar
+
+
+
+
+    ##  設定 mysql 環境
+    yum install php-mysqlnd
+    systemctl restart php-fpm
+    setsebool httpd_can_network_connect_db 1
+
+
+
+
+    ########################
+    ############### 安裝 Auth
+    ## composer.json ########
+    composer update
+    #########################
+    composer dump-autoload
+    composer require laravel/ui --dev  ## 方法B
+
+
+    ## 產生............[auth/login.blade.php ..等等文件  The [layouts/app.blade.php] v
+    ## 已經存在..??               
+    #php artisan ui vue --auth   ## 這個會中斷?
+    ###
+
+
+    ############# 安裝 npm
+    # 安裝訊息
+    # $ yum info epel-release
+    # 安裝
+    yum -y install epel-release
+    yum -y install nodejs
+    # 版本
+    # $ node -v
+    ############# npm 指令安裝完成
+
+    ##############################################
+    ### 找不到要導入的樣式表。
+    ### // Bootstrap
+    ### @import '~bootstrap/scss/bootstrap';
+    ### App.scss
+    ### 產生失敗 /css/app.css 
+    npm install bootstrap
+    ##########################################
+
+
+
+    ########### https://ray247k.blogspot.com/2018/04/laravel-sass.html
+    # 初始化套件
+    # npm -install
+    # 這時候如果執行
+    # npm run dev
+    # 就會進行編譯，把 \resources\sass 內的資料編譯後儲存在
+    # \public 對應的資料夾下，詳細設定可以在 \webpack.mix.js 中看到
+    npm install && npm run dev
+    # 接下來我們把之前的 css 檔案直接複製貼上到
+    # \resources\sass\app.scss    ---------------貼到檔案中--只編譯  app.scss檔案....產生 public/css/app.css
+    # 再進行一次 npm run dev 編譯
+    # 記得把 view 引入的 CSS路徑更新！
+
+    # 如此作法，我們每次更改 CSS 都要重新編譯，這樣不是很麻煩嗎？
+    # 當然有解決的方法！
+    # npm run wstch
+    # 這個指令定義可以在 \package.json 中找到
+    # 之後 SASS會自行偵測是否有改動SCSS檔案，並且重新編譯
+    # 這樣用起來就和以前直接改CSS檔案一樣了呢！
+
+
+    ########
+    ######## 必須 建立好一個 moon
+    ########
+    ######## CREATE DATABASE moon;
+    ######## DROP DATABASE `moon`;
+    ### inDM <<<
+    php artisan migrate
+    setsebool httpd_can_network_connect_db 1
+
 
 
 
 
 ########################
-############### 安裝 Auth
-## composer.json ########
-composer update
-#########################
-composer dump-autoload
-composer require laravel/ui --dev  ## 方法B
-
-
-## 產生............[auth/login.blade.php ..等等文件  The [layouts/app.blade.php] v
-## 已經存在..??               
-#php artisan ui vue --auth   ## 這個會中斷?
-###
-
-
-############# 安裝 npm
-# 安裝訊息
-# $ yum info epel-release
-# 安裝
-yum -y install epel-release
-yum -y install nodejs
-# 版本
-# $ node -v
-############# npm 指令安裝完成
-
-##############################################
-### 找不到要導入的樣式表。
-### // Bootstrap
-### @import '~bootstrap/scss/bootstrap';
-### App.scss
-### 產生失敗 /css/app.css 
-npm install bootstrap
-##########################################
-
-
-
-########### https://ray247k.blogspot.com/2018/04/laravel-sass.html
-# 初始化套件
-# npm -install
-# 這時候如果執行
-# npm run dev
-# 就會進行編譯，把 \resources\sass 內的資料編譯後儲存在
-# \public 對應的資料夾下，詳細設定可以在 \webpack.mix.js 中看到
-npm install && npm run dev
-# 接下來我們把之前的 css 檔案直接複製貼上到
-# \resources\sass\app.scss    ---------------貼到檔案中--只編譯  app.scss檔案....產生 public/css/app.css
-# 再進行一次 npm run dev 編譯
-# 記得把 view 引入的 CSS路徑更新！
-
-# 如此作法，我們每次更改 CSS 都要重新編譯，這樣不是很麻煩嗎？
-# 當然有解決的方法！
-# npm run wstch
-# 這個指令定義可以在 \package.json 中找到
-# 之後 SASS會自行偵測是否有改動SCSS檔案，並且重新編譯
-# 這樣用起來就和以前直接改CSS檔案一樣了呢！
-
-
-########
-######## 必須 建立好一個 moon
-########
-######## CREATE DATABASE moon;
-######## DROP DATABASE `moon`;
-### inDM <<<
-php artisan migrate
-setsebool httpd_can_network_connect_db 1
+else
+    echo "說明 [指令] [port] [mysql使用者] [mysql密碼]"
+    echo ""
+    echo ""
+fi
