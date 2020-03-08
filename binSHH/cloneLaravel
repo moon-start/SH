@@ -121,7 +121,8 @@ then
 
     ### 看这句提示，是因为缺少 package.json 这个文件。
     ### 初始化項目
-    npm init -f
+    ### npm init -f  
+    ### 專案底下的 package.json
 
     ##############################################
     ### 找不到要導入的樣式表。
@@ -133,7 +134,7 @@ then
     ##########################################
 
 
-
+    # 執行 npm install，會安裝 專案/package.json 指定的套件
     ########### https://ray247k.blogspot.com/2018/04/laravel-sass.html
     # 初始化套件
     # npm -install
