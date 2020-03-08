@@ -12,10 +12,14 @@ if   [ "$#" = "1" ]
 then
 ########################
 
-    wget https://raw.githubusercontent.com/moon-start/SH/master/binSQL/moonSQL.sql
-    mysql -u root -p  $1< ./moonSQL.sql
-    rm -rf ./moonSQL.sql
-
+    ########################
+    wget https://raw.githubusercontent.com/moon-start/SH/master/binSQL/moonPASS.sql
+    # sed -i "s/moon/$1/g"  ./moonPASS.sql
+    clear
+    echo "你輸入你的 MySQL 密碼: "
+    mysql -u root -p  <   ./moonPASS.sql
+    rm -rf ./moonPASS.sql
+    
 
 else
     echo ""
