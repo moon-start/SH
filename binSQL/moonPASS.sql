@@ -1,4 +1,2 @@
-SET GLOBAL validate_password.policy=LOW;
-ALTER USER 'root'@'localhost' IDENTIFIED BY 'hello123' PASSWORD EXPIRE NEVER;
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'hello123';
-FLUSH PRIVILEGES;
+CREATE USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'hello123';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' WITH GRANT OPTION;
