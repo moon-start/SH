@@ -12,8 +12,8 @@ if   [ "$#" = "1" ]
 then
 ########################
     wget https://raw.githubusercontent.com/moon-start/SH/master/binSQL/moonADD.sql
-    sed -i "s/moon/$1/g"  moonADD.sql
-    mysql -u root -p  < ./moonADD.sql
+    sed -i "s/moon/$1/g"  ./moonADD.sql
+    mysql -u root -p  <   ./moonADD.sql
     rm -rf ./moonADD.sql
     
 else
