@@ -61,9 +61,9 @@ then
     php artisan key:generate
 
     ## 1.首先關閉artisan服務器並更改.env文件並運行以下命令
-    php artisan cache:clear
-    php artisan config:clear
-    php artisan route:clear
+    # php artisan cache:clear
+    # php artisan config:clear
+    # php artisan route:clear
     
     # 然後運行 http://127.0.0.1:8000
     # php artisan serve   # 不需要這行
@@ -116,10 +116,15 @@ then
     ############# npm 指令安裝完成
 
 
+
     ### 看这句提示，是因为缺少 package.json 这个文件。
     ### 初始化項目
     ### npm init -f  
     ### 專案底下的 package.json
+    
+    ## 刪除 node_modules (當前目錄的)
+    rm -rf node_modules 
+
 
     ##############################################
     ### 找不到要導入的樣式表。
@@ -199,10 +204,10 @@ then
     php artisan key:generate
 
     ## 1.首先關閉artisan服務器並更改.env文件並運行以下命令
-    php artisan cache:clear
-    php artisan config:clear
-    php artisan route:clear
-    ##  設定 mysql 環境
+    # php artisan cache:clear
+    # php artisan config:clear
+    # php artisan route:clear
+    # ##  設定 mysql 環境
     yum install php-mysqlnd
     systemctl restart php-fpm
     setsebool httpd_can_network_connect_db 1
