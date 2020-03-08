@@ -51,6 +51,12 @@ else
 fi
 1
 2
+###### F 相反
+if [ ! -f "package.json" ];then
+echo "當前目錄不存在 package.json: $1"
+else
+echo "當前目錄存在文件 package.json: $1"
+fi
 3
 4
 5

@@ -1,6 +1,25 @@
 #!/bin/bash
 
 
+## 取得上層目錄
+QQ=`pwd`
+QQ=${QQ##*/}
+
+
+
+
+if   [ -f "`pwd`/package.json" ]; then
+    # 檔案 /path/to/dir/filename 存在
+    echo "存在A."
+elif [ -f "`pwd`/composer.json" ]; then
+    # 檔案 /path/to/dir/filename 存在
+    echo "存在B."
+else
+    # 檔案 /path/to/dir/filename 不存在
+    echo "does not exists."
+fi
+
+
 ### 看这句提示，是因为缺少 package.json 这个文件。
 ### 初始化項目
 # yum remove nodejs npm -y

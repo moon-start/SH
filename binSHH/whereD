@@ -23,7 +23,12 @@ else
 fi
 
 
-
+# #!/bin/bash
+# if [ ! -f "$1" ];then
+# echo "當前目錄不存在文件: $1"
+# else
+# echo "當前目錄存在文件: $1"
+# fi
 
 
 # if [ -d "/path/to/dir" ]; then
