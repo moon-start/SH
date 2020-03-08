@@ -1,3 +1,4 @@
-ALTER USER 'root'@'%' IDENTIFIED BY 'hello123' PASSWORD EXPIRE NEVER;
-ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'hello123';
+SET GLOBAL validate_password.policy=LOW;
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'hello123' PASSWORD EXPIRE NEVER;
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'hello123';
 FLUSH PRIVILEGES;

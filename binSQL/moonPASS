@@ -27,3 +27,15 @@ else
     echo ""
 fi
 
+
+# ## 查看 user host
+# use mysql;select user,host from user;
+
+
+# ## show_validate_password
+# SHOW VARIABLES LIKE 'validate_password%';
+# ## 7.0
+# ## SET GLOBAL validate_password_policy=LOW;
+# ## 8.0
+# SET GLOBAL validate_password.policy=LOW;
+
