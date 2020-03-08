@@ -1,6 +1,25 @@
 #!/bin/bash
 
 
-wget https://raw.githubusercontent.com/moon-start/SH/master/binSQL/moonSQL.sql
-mysql -u root -p < ./moonSQL.sql
-rm -rf ./moonSQL.sql
+
+
+
+## 取得上層目錄 #########
+QQ=`pwd`
+QQA=${QQ##*/}
+
+if   [ "$#" = "1" ]
+then
+########################
+
+    wget https://raw.githubusercontent.com/moon-start/SH/master/binSQL/moonSQL.sql
+    mysql -u root -p  $1< ./moonSQL.sql
+    rm -rf ./moonSQL.sql
+
+
+else
+    echo ""
+    echo "說明 [指令] [資料庫的名稱]"
+    echo ""
+fi
+

@@ -24,26 +24,6 @@ SET time_zone = "+00:00";
 CREATE DATABASE IF NOT EXISTS `moon` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `moon`;
 
--- --------------------------------------------------------
-
-
-
-
--- 已傾印資料表的限制式
---
-
---
--- 資料表的限制式 `Invoice`
---
-ALTER TABLE `Invoice`
-  ADD CONSTRAINT `Invoice_ibfk_1` FOREIGN KEY (`Payment_ID`) REFERENCES `Payment` (`Payment_id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
-
---
--- 資料表的限制式 `Item`
---
-ALTER TABLE `Item`
-  ADD CONSTRAINT `Item_ibfk_1` FOREIGN KEY (`Invoice_ID`) REFERENCES `Invoice` (`Invoice_id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
