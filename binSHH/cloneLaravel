@@ -5,6 +5,14 @@
 # kill -9 15150
 
 
+
+## 安裝 composer
+yum install wget
+wget https://getcomposer.org/installer -O composer-installer.php
+php composer-installer.php --filename=composer --install-dir=/usr/bin
+rm -rf composer-installer.php
+
+
 ## 用法
 #clonePHP laravel
 
@@ -67,13 +75,20 @@ composer install
 
 
 
+# DB_PORT=3306
+# DB_DATABASE=moon
+# DB_USERNAME=root
+# DB_PASSWORD=hello123
 ## 不太適合用 wget ...改用 git clone?
 ### 指令設計 在composer專案 
 ###################### 建議寫在XP專案 一起上傳
 ## 在專案頂層目錄
 rm -rf  .env
 wget https://raw.githubusercontent.com/moon-start/SH/master/binSHHconf/.env
-
+sed -i "s/DB_PORT/$1/g"      .env
+sed -i "s/DB_DATABAS/$2/g"   .env
+sed -i "s/DB_USERNAME/$3/g"  .env
+sed -i "s/DB_PASSWORD/$4/g"  .env
 
 ## 修改權限
 # chownPHP $1
