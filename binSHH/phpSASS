@@ -8,11 +8,9 @@ QQ=${QQ##*/}
 if   [ -f "`pwd`/package.json" ]; then
     # 檔案 /path/to/dir/filename 存在
     #echo "存在A."
-    echo "(位置不對) does not exists."
     if [ -f "`pwd`/composer.json" ]; then
         # 檔案 /path/to/dir/filename 存在
         #echo "存在B."
-        echo "(位置不對) does not exists."
         if [ -f "`pwd`/.env" ]; then
             # 檔案 /path/to/dir/filename 存在
             #echo "存在C."
@@ -57,6 +55,8 @@ if   [ -f "`pwd`/package.json" ]; then
             echo "編譯scss，專案/resources/sass目錄。"
             npm install && npm run dev
             echo "產生css，於\public\css的資料夾下，"
+        else
+            echo "(位置不對) does not exists."
         fi
     fi
 else
