@@ -172,7 +172,7 @@ then
 
 
 ########################
-if   [ "$#" = "1" ]
+elif   [ "$#" = "1" ]
 then
     #安裝需要的套件
     yum -y install php-xml rsyslog
