@@ -45,8 +45,10 @@ then
         echo ""
         echo "說明 [指令] [nginx root目錄]"
         echo ""
+    fi
 else
     echo ""
     echo "cd /etc/nginx 失敗"
     echo "請確認 nginx 安裝!!"
     echo ""
+fi
