@@ -49,10 +49,10 @@ then
     ## 在專案頂層目錄
     rm -rf  .env
     wget https://raw.githubusercontent.com/moon-start/SH/master/binSHHconf/.env
-    sed -i "s/DB_PORT/$2/g"      .env
-    sed -i "s/DB_DATABAS/$3/g"   .env
-    sed -i "s/DB_USERNAME/$4/g"  .env
-    sed -i "s/DB_PASSWORD/$5/g"  .env
+    sed -i "s/3306/$2/g"      .env
+    sed -i "s/moon/$3/g"      .env
+    sed -i "s/root/$4/g"      .env
+    sed -i "s/hello123/$5/g"  .env
 
     ## 修改權限
     # chownPHP $1
@@ -180,12 +180,12 @@ then
 ########################
 elif   [ "$#" = "1" ]
 then
-    # ## 下載 moonADD
-    # wget https://raw.githubusercontent.com/moon-start/SH/master/binSQL/moonADD
-    # ## 建立一個 moon 資料庫
-    # ## 執行 (會要求輸入 MySQL密碼)
-    # sh moonADD moon
-    # rm -rf ./moonADD
+    ## 下載 moonADD
+    wget https://raw.githubusercontent.com/moon-start/SH/master/binSQL/moonADD
+    ## 建立一個 moon 資料庫
+    ## 執行 (會要求輸入 MySQL密碼)
+    sh moonADD moon
+    rm -rf ./moonADD
     ##
     ##
     ##
@@ -201,10 +201,13 @@ then
     ###################### 建議寫在XP專案 一起上傳
     rm -rf  .env
     wget https://raw.githubusercontent.com/moon-start/SH/master/binSHHconf/.env
-    sed -i "s/DB_PORT/3306/g"      .env
-    sed -i "s/DB_DATABAS/$1/g"   .env
-    sed -i "s/DB_USERNAME/root/g"  .env
-    sed -i "s/DB_PASSWORD/hello123/g"  .env
+    sed -i "s/3303/3306/g"      .env
+    sed -i "s/moon/$1/g"   .env
+    sed -i "s/root/root/g"  .env
+    sed -i "s/hello123/hello123/g"  .env
+
+
+
 
     ## 修改權限
     # chownPHP $1
