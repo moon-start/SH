@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： localhost
--- 產生時間： 2020 年 03 月 08 日 09:02
+-- 產生時間： 2020 年 03 月 08 日 08:54
 -- 伺服器版本： 8.0.17
 -- PHP 版本： 7.2.11
 
@@ -22,6 +22,9 @@ SET time_zone = "+00:00";
 -- 資料庫： `moon`
 --
 
+-- --------------------------------------------------------
+
+
 --
 -- 傾印資料表的資料 `invoice`
 --
@@ -38,6 +41,9 @@ INSERT INTO `invoice` (`id`, `Invoice`, `location`, `Payment_ID`) VALUES
 (11, 'WH-89260141', 'Donutes(德賢)', 11),
 (12, 'WM-54095660', 'McDonald\'s(後勁)', 12),
 (13, 'VZ-00310441', '7-11(德賢)', 13);
+
+-- --------------------------------------------------------
+
 
 --
 -- 傾印資料表的資料 `item`
@@ -66,6 +72,9 @@ INSERT INTO `item` (`id`, `Invoice_ID`, `item`, `money`) VALUES
 (24, 3, '舒潔棉柔小熊維尼版', 100),
 (25, 3, '舒潔棉柔小熊維泥版', 100);
 
+-- --------------------------------------------------------
+
+
 --
 -- 傾印資料表的資料 `payment`
 --
@@ -82,7 +91,8 @@ INSERT INTO `payment` (`id`, `date`, `payment`, `points`) VALUES
 (11, '2019-12-10 20:06:46', '現金', 2),
 (12, '2019-12-16 22:50:21', 'Mcard(點點卡)', -50),
 (13, '2019-12-18 23:30:44', '悠遊卡', 3);
-COMMIT;
+
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
