@@ -180,12 +180,12 @@ then
 ########################
 elif   [ "$#" = "1" ]
 then
-    ## 下載 moonADD
-    wget https://raw.githubusercontent.com/moon-start/SH/master/binSQL/moonADD
-    ## 建立一個 moon 資料庫
-    ## 執行 (會要求輸入 MySQL密碼)
-    sh moonADD moon
-    rm -rf ./moonADD
+    # ## 下載 moonADD
+    # wget https://raw.githubusercontent.com/moon-start/SH/master/binSQL/moonADD
+    # ## 建立一個 moon 資料庫
+    # ## 執行 (會要求輸入 MySQL密碼)
+    # sh moonADD moon
+    # rm -rf ./moonADD
     ##
     ##
     ##
