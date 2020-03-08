@@ -8,7 +8,7 @@
 ## 取得上層目錄 #########
 cd  /etc/nginx
 QQ=`pwd`
-#QQA=${QQ##*/}
+QQ=${QQ##*/}
 
 if   [ "$QQ" = "nginx" ]
 then
