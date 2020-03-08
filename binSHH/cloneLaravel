@@ -171,6 +171,6 @@ then
 ########################
 else
     echo ""
-    echo "說明 [指令] [nginx root] [port] [mysql使用者] [mysql密碼]"
+    echo "說明 [指令] [nginx root] [port] [資料庫] [mysql使用者] [mysql密碼]"
     echo ""
 fi
