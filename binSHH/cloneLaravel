@@ -16,9 +16,6 @@ then
     #安裝需要的套件
     yum -y install php-xml rsyslog
     systemctl start rsyslog
-    cls
-
-
 
     ## 假設尚未安裝
     #cd ~/www
@@ -170,8 +167,71 @@ then
 
 
 ########################
+if   [ "$#" = "1" ]
+then
+    #安裝需要的套件
+    yum -y install php-xml rsyslog
+    systemctl start rsyslog
+    ########
+    cd /usr/share/nginx/html/
+    rm -rf ./laravel
+    git clone https://github.com/moon-start/laravel.git
+    cd ./laravel
+    composer install 
+    ###################### 建議寫在XP專案 一起上傳
+    rm -rf  .env
+    wget https://raw.githubusercontent.com/moon-start/SH/master/binSHHconf/.env
+    sed -i "s/DB_PORT/3306/g"      .env
+    sed -i "s/DB_DATABAS/$1/g"   .env
+    sed -i "s/DB_USERNAME/root/g"  .env
+    sed -i "s/DB_PASSWORD/hello123/g"  .env
+
+    ## 修改權限
+    # chownPHP $1
+    #### 修改目錄的 權限
+    chown -R nginx ../
+    semanage fcontext -a -t httpd_sys_rw_content_t "/usr/share/nginx/html/laravel/storage(/.*)?"
+    semanage fcontext -a -t httpd_sys_rw_content_t "/usr/share/nginx/html/laravel/resources(/.*)?"
+    restorecon -Rvv ../
+
+
+    ## 更新KEY
+    php artisan key:generate
+
+    ## 1.首先關閉artisan服務器並更改.env文件並運行以下命令
+    php artisan cache:clear
+    php artisan config:clear
+    php artisan route:clear
+    ##  設定 mysql 環境
+    yum install php-mysqlnd
+    systemctl restart php-fpm
+    setsebool httpd_can_network_connect_db 1
+    ########################
+    ## composer.json ########
+    composer update
+    #########################
+    composer dump-autoload
+    composer require laravel/ui --dev  ## 方法B
+    ############# 安裝 npm
+    yum -y install epel-release
+    yum -y install nodejs
+    ##########################################
+    npm install bootstrap
+    ##########################################
+    npm install && npm run dev
+    ##########################################
+    php artisan migrate
+    setsebool httpd_can_network_connect_db 1
 else
     echo ""
     echo "說明 [指令] [nginx root] [port] [資料庫] [mysql使用者] [mysql密碼]"
+    echo ""
+    echo "說明 [指令]  [資料庫]"
+    echo ""
+    echo "[其他自動填入]"
+    echo "[nginx root] /usr/share/nginx/html/" 
+    echo "[port] 3306" 
+    echo "[mysql使用者] root" 
+    echo "[mysql密碼] hello123"
     echo ""
 fi
