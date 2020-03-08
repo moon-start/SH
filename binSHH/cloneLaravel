@@ -12,6 +12,12 @@ QQA=${QQ##*/}
 if   [ "$#" = "5" ]
 then
 ########################
+    ## 下載 moonADD
+    wget https://raw.githubusercontent.com/moon-start/SH/master/binSQL/moonADD
+    ## 建立一個 moon 資料庫
+    ## 執行 (會要求輸入 MySQL密碼)
+    sh moonADD moon
+    rm -rf ./moonADD
 
     #安裝需要的套件
     yum -y install php-xml rsyslog

@@ -37,7 +37,7 @@ fi
 # ## 7.0
 # ## SET GLOBAL validate_password_policy=LOW;
 # ## 8.0 ## 成功
-# SET GLOBAL validate_password.policy=LOW;
+# SET GLOBAL validate_password.policy=LOW;                   <<< 修改密碼複雜度
 
 
 # ## 解答在
