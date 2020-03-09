@@ -2,7 +2,7 @@
 
 
 
-if [ ! -f  /etc/profile.QQ ] ; then
+if [ ! -f  /etc/profile.QM ] ; then
 ##################### >> 注意是附加 不要覆蓋
     echo "QM=/usr/share/nginx/html/laravel/node_modules/">>/etc/profile
     #echo "source /etc/profile">>/etc/profile
