@@ -3,4 +3,4 @@
 
 ##################### >> 注意是附加 不要覆蓋
 echo "QQAAB=`pwdQQ`">>/etc/profile
-source /etc/profile
+echo "source /etc/profile">>/etc/profile
