@@ -12,3 +12,12 @@ if [ ! -f  /etc/profile.QQ ] ; then
 else 
     echo "已經設定過~!!"
 fi
+
+
+
+
+## 使用方式
+
+#1# pwdSET
+
+#2# cd $QQ  
