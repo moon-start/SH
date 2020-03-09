@@ -2,5 +2,5 @@
 
 
 ##################### >> 注意是附加 不要覆蓋
-echo "QQAAB=`pwdQQ`">>/etc/profile
-echo "source /etc/profile">>/etc/profile
+echo "QQ=^`pwdQQ^`">>/etc/profile
+#echo "source /etc/profile">>/etc/profile
