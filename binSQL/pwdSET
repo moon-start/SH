@@ -1,0 +1,6 @@
+#!/bin/bash
+
+
+
+echo "QQAAB=`pwdQQ`">/etc/profile
+source /etc/profile
