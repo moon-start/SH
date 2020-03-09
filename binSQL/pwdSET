@@ -1,6 +1,6 @@
 #!/bin/bash
 
 
-
-echo "QQAAB=`pwdQQ`">/etc/profile
+##################### >> 注意是附加 不要覆蓋
+echo "QQAAB=`pwdQQ`">>/etc/profile
 source /etc/profile
