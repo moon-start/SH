@@ -3,4 +3,6 @@
 
 cd ~/www/laravel
 
+echo `pwd`
+
 
