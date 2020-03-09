@@ -40,6 +40,8 @@ if   [ -f "`pwd`/package.json" ]; then
             # 把 node_modules 整個砍掉
             rm -rf node_modules 
 
+            ##
+            npm install font-awesome
 
             ## 這個必須要加上
             ##############################################
