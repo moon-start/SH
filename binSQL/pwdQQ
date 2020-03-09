@@ -1,10 +1,23 @@
 #!/bin/bash
 
 
-### 用法  cd `l`
 
-cd ~/www/laravel
+if [ ! -f  /etc/profile.QQ ] ; then
+##################### >> 注意是附加 不要覆蓋
+    echo "QQ=\`pwdQQ.sh\`">>/etc/profile
+    #echo "source /etc/profile">>/etc/profile
 
-echo `pwd`
+    echo "已經產生" > /etc/profile.QQ
+
+else 
+    echo "已經設定過~!!"
+fi
 
 
+
+
+## 使用方式
+
+#1# pwdSET
+
+#2# cd $QQ  
