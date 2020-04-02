@@ -69,9 +69,20 @@ else
     # rm -rf     /usr/bin/*.sql
     # cp -f `pwd`/binSHHblade/*.sql  /usr/bin
     # echo ""
+
+    ########################    Django
+    rm -rf /usr/bin/*.Django
+    chmod +x `pwd`/Django/*.Django
+    ln `pwd`/Django/*.Django   /usr/bin
 fi
 
 
 
+## 指令檔為.Django 限制
+########################    說明範本
+########################    Django
+# rm -rf /usr/bin/*.Django
+# chmod +x `pwd`/Django/*.Django
+# ln `pwd`/Django/*.Django   /usr/bin
 
 

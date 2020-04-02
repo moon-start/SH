@@ -1,0 +1,5 @@
+#!/bin/bash
+
+#PY3.Djabgo
+cp  /usr/bin/PY3.Djabgo  /usr/bin/PY3  
+#rm -fm /usr/bin/*.Djabgo
