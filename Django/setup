@@ -1,14 +1,19 @@
 #!/bin/bash
+##########################
+##########################
+##########################
+##########################
+##########################
+##########################
+## 修改範本 
+## 建立指令  [只需要輸入::檔名::不用附檔名]
+# sed -e "s/QQ/$1/g" /usr/bin/Go.sh   > /usr/bin/$1
+# chmod +x                              /usr/bin/$1
 
-#PY3.Djabgo
-#cp  /usr/bin/PY3.Djabgo  /usr/bin/PY3  
-#rm -fm /usr/bin/*.Djabgo
-
-
-### 檔案名稱 [不用副檔名]
-### 建立中介呼叫檔
-# nn=
-# rm -rf  /usr/bin/$1
-sed -e "s/QQ/$1/g" /usr/bin/Go.sh   > /usr/bin/$1
-chmod +x                              /usr/bin/$1
-
+if    [ "$#" = "0" ]
+then
+    echo "建立指令  [只需要輸入::檔名::不用附檔名]"
+else  [ "$#" = "1" ]
+    sed -e "s/QQ/$1/g" /usr/bin/Go.sh   > /usr/bin/$1
+    chmod +x                              /usr/bin/$1
+fi
