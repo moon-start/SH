@@ -34,3 +34,13 @@ do
      
  rm -rf /usr/bin/$dir 
 done
+
+
+
+############################
+for dir in $(ls `pwd`/Django)
+do
+     
+ rm -rf /usr/bin/$dir 
+done
+#############################
