@@ -32,6 +32,8 @@ cd /root/SH/
 if [ "$#" = "0" ]
 then
     #echo "len( )=0"
+
+    ############# 這裡是
     sh ok `pwd`
 else
     #echo "$@"
@@ -76,8 +78,8 @@ else
     # echo ""
 
     ########################    Django
-    rm -rf /usr/bin/*.Django
-    chmod +x `pwd`/Django/*.Django
+    #rm -rf /usr/bin/*.Django
+    chmod +x `pwd`/Django/*
     ln `pwd`/Django/*.Django   /usr/bin
 fi
 
