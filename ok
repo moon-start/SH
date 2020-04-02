@@ -79,8 +79,8 @@ else
 
     ########################    Django
     #rm -rf /usr/bin/*.Django
-    chmod +x `pwd`/Django/*
-    ln `pwd`/Django/*.Django   /usr/bin
+    chmod +x `pwd`/Django/{,.Django}
+    ln `pwd`/Django/{,.Django}   /usr/bin
 fi
 
 
