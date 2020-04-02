@@ -81,9 +81,10 @@ else
     rm -rf /usr/bin/*.Djabgo     ## 砍掉連結檔
     chmod +x `pwd`/Django/*      ## 授權
     ln `pwd`/Django/*   /usr/bin ## 建立連結檔
-    cp -f `pwd`/Django/Go.sh  /usr/bin        ## 共用檔案 Go.sh
-    cp -f `pwd`/Django/setup  /usr/bin        ## 共用檔案 
-    cp -f `pwd`/Django/setup-D  /usr/bin      ## 共用檔案 
+    ############################################# Ln 了 所以不需要
+    #cp -f `pwd`/Django/Go.sh  /usr/bin        ## 共用檔案 Go.sh
+    #cp -f `pwd`/Django/setup  /usr/bin        ## 共用檔案 
+    #cp -f `pwd`/Django/setup-D  /usr/bin      ## 共用檔案 
 fi
 
 
