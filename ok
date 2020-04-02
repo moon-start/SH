@@ -77,10 +77,11 @@ else
     # cp -f `pwd`/binSHHblade/*.sql  /usr/bin
     # echo ""
 
-    ########################    Django
-    #rm -rf /usr/bin/*.Django
-    chmod +x `pwd`/Django/{,.Django}
-    ln `pwd`/Django/{,.Django}   /usr/bin
+    ########################     Django
+    rm -rf /usr/bin/*.Djabgo     ## 砍掉連結檔
+    chmod +x `pwd`/Django/*      ## 授權
+    ln `pwd`/Django/*   /usr/bin ## 建立連結檔
+    cp -f `pwd`/Django/Go.sh  /usr/bin        ## 共用檔案 Go.sh
 fi
 
 
