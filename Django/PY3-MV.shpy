@@ -26,3 +26,6 @@ source /usr/local/bin/virtualenvwrapper.sh
 # 使配置生效
 # $ source ~/.bash_profile
 # $ source ~/.zshrc
+
+### 清空
+cls
