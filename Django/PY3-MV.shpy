@@ -18,14 +18,14 @@ which virtualenvwrapper.sh
 ########################
 ## 如果沒這個目錄 就寫入設定檔
 if [ ! -d $HOME/.MV ]; then
-    echo "mkdir -p $HOME/.MV             >> $HOME/.bash_profile"
-    echo "export WORKON_HOME=$HOME/.MV   >> $HOME/.bash_profile"
+    echo "mkdir -p $HOME/.MV             >> "$HOME/.bashrc
+    echo "export WORKON_HOME=$HOME/.MV   >> "$HOME/.bashrc
 
     #export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-    echo "export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3  >> $HOME/.bash_profile"
-    echo "source /usr/local/bin/virtualenvwrapper.sh        >> $HOME/.bash_profile"
+    echo "export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3  ">> $HOME/.bashrc
+    echo "source /usr/local/bin/virtualenvwrapper.sh        ">> $HOME/.bashrc
 fi
-source $HOME/.bash_profile
+source .bashrc
 
 
 
