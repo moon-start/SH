@@ -17,7 +17,7 @@ which virtualenvwrapper.sh
 #export WORKON_HOME=$HOME/.virtualenvs
 ########################
 ## 如果沒這個目錄 就寫入設定檔
-if [ -d $HOME/.MV ]; then
+if [ ! -d $HOME/.MV ]; then
     echo "mkdir -p $HOME/.MV             >> $HOME/.bashrc"
     echo "export WORKON_HOME=$HOME/.MV   >> $HOME/.bashrc"
 
