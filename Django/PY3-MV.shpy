@@ -25,7 +25,7 @@ if [ ! -d $HOME/.MV ]; then
     echo "export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3  >> $HOME/.bash_profile"
     echo "source /usr/local/bin/virtualenvwrapper.sh        >> $HOME/.bash_profile"
 fi
-source $HOME/.bashrc
+source $HOME/.bash_profile
 
 
 
