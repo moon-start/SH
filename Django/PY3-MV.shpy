@@ -19,6 +19,7 @@ which virtualenvwrapper.sh
 ## 如果沒這個目錄 就寫入設定檔
 if [ ! -d $HOME/.MV ]; then
     mkdir -p $HOME/.MV            
+    echo "# 重新啟動[PuTTY.exe]才會套用                                   ">> $HOME/.bashrc    
     echo "export WORKON_HOME=$HOME/.MV                      ">> $HOME/.bashrc
 
     #export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
