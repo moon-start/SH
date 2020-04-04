@@ -25,6 +25,8 @@ if [ -d $HOME/.MV ]; then
     echo "export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3  >> $HOME/.bashrc"
     echo "source /usr/local/bin/virtualenvwrapper.sh        >> $HOME/.bashrc"
 fi
+source $HOME/.bashrc
+
 
 
 
