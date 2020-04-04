@@ -16,6 +16,6 @@ then
 else  [ "$#" = "1" ]
 #then
 # else 
-    sed -e "s/QQ/$1/g" /usr/bin/Go.sh $@  > /usr/bin/$1
+    sed -e "s/QQ/$1/g" /usr/bin/Go.sh   > /usr/bin/$1
     chmod +x                              /usr/bin/$1
 fi
