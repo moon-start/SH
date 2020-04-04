@@ -15,12 +15,18 @@ which virtualenvwrapper.sh
 # 配置环境变量 (以后创建的环境目录都集中放在 $WORKON_HOME 目录下管理了)
 # 配置文件位置: ~/.bashrc (bash) 或 ~/.zshrc (zsh)
 #export WORKON_HOME=$HOME/.virtualenvs
-mkdir -p $HOME/.MV
-export WORKON_HOME=$HOME/.MV
+########################
+## 如果沒這個目錄 就寫入設定檔
+if [ -d $HOME/.MV ]; then
+    echo "mkdir -p $HOME/.MV             >> $HOME/.bashrc"
+    echo "export WORKON_HOME=$HOME/.MV   >> $HOME/.bashrc"
 
-#export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-source /usr/local/bin/virtualenvwrapper.sh
+    #export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+    echo "export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3  >> $HOME/.bashrc"
+    echo "source /usr/local/bin/virtualenvwrapper.sh        >> $HOME/.bashrc"
+fi
+
+
 
 
 # 使配置生效
