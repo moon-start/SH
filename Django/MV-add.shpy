@@ -1,9 +1,19 @@
 #!/bin/bash
 
 
+#if    [ "$#" = "0" ]
+#then
+#    echo "建立指令  [輸入::MV名稱]"
+#else  [ "$#" = "1" ]
+#    mkvirtualenv $0 --python=python3
+#fi
+
+
+
+
 if    [ "$#" = "0" ]
 then
-    echo "建立指令  [輸入::MV名稱]"
+    echo "1"
 else  [ "$#" = "1" ]
-    mkvirtualenv $0 --python=python3
+    echo "2"
 fi
