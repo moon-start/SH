@@ -2,4 +2,4 @@
 
 #########
 ## 這是範本指令檔
-sh QQ.shpy  $@
+sh QQ.shpy  
