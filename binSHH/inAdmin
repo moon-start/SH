@@ -1,12 +1,14 @@
 #!/bin/bash
 
+
+
+
+
+
+
 ## 使用
 # inAdmin   /usr/share/nginx/html
-
 # inAdmin   /root/www/laravel/public
-
-
-
 
 
 
