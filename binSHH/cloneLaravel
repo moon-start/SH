@@ -23,7 +23,9 @@ then
     sh moonADD moon
     rm -rf ./moonADD
     ################################### 下載且安裝
-    inAdmin   /root/www/laravel/public
+    if [! -d "/root/www/laravel/public/Admin" ]; then
+        inAdmin   /root/www/laravel/public
+    fi
     ##
     ##
 
