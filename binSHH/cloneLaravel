@@ -12,6 +12,17 @@ QQA=${QQ##*/}
 if   [ "$#" = "5" ]
 then
 ########################
+    ################## 需要的套件
+    yum -y install php-xml rsyslog
+    systemctl start rsyslog
+    # composer create-project --prefer-dist laravel/laravel PHPproject
+    ##################
+    cd /usr/share/nginx/html/
+    rm -rf ./laravel
+    git clone https://github.com/moon-start/laravel.git
+    cd ./laravel
+    ###################
+
     ## 下載 moon
     wget https://raw.githubusercontent.com/moon-start/SH/master/binSQL/moonADD
     wget https://raw.githubusercontent.com/moon-start/SH/master/binSQL/moonDEL
@@ -28,23 +39,6 @@ then
     fi
     ##
     ##
-
-    #安裝需要的套件
-    yum -y install php-xml rsyslog
-    systemctl start rsyslog
-
-    ## 假設尚未安裝
-    #cd ~/www
-    #cloneX $1
-    ############# 專案名稱
-    #cd ~/www/$1
-    # composer create-project --prefer-dist laravel/laravel PHPproject
-    # 在專案底下?
-    ########
-    cd $1
-    rm -rf ./laravel
-    git clone https://github.com/moon-start/laravel.git
-    cd ./laravel
     composer install 
 
 
@@ -179,7 +173,7 @@ then
     ########
     ######## CREATE DATABASE moon;
     ######## DROP DATABASE `moon`;
-    ### inDM <<<
+    ### inDM <<<                      inDM 建立資料表
     php artisan migrate
     setsebool httpd_can_network_connect_db 1
 
@@ -190,6 +184,15 @@ then
 ########################
 elif   [ "$#" = "1" ]
 then
+    ################## 需要的套件
+    yum -y install php-xml rsyslog
+    systemctl start rsyslog
+    ##################
+    cd /usr/share/nginx/html/
+    rm -rf ./laravel
+    git clone https://github.com/moon-start/laravel.git
+    cd ./laravel
+    ###################
     ## 下載 moon
     wget https://raw.githubusercontent.com/moon-start/SH/master/binSQL/moonADD
     wget https://raw.githubusercontent.com/moon-start/SH/master/binSQL/moonDEL
@@ -206,14 +209,6 @@ then
     fi
     ##
     ##
-    #安裝需要的套件
-    yum -y install php-xml rsyslog
-    systemctl start rsyslog
-    ########
-    cd /usr/share/nginx/html/
-    rm -rf ./laravel
-    git clone https://github.com/moon-start/laravel.git
-    cd ./laravel
     composer install 
     ###################### 建議寫在XP專案 一起上傳
     rm -rf  .env
@@ -264,7 +259,7 @@ then
     npm install font-awesome
     ##########################################
     npm install && npm run dev
-    ##########################################
+    ########################################## inDM 建立資料表
     php artisan migrate
     setsebool httpd_can_network_connect_db 1
 else
