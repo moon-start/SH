@@ -229,7 +229,7 @@ then
     yum install php-mysqlnd
     systemctl restart php-fpm
     setsebool httpd_can_network_connect_db 1
-    ########################
+    #########################
     ## composer.json ########
     composer update
     #########################
@@ -239,7 +239,12 @@ then
     yum -y install epel-release
     yum -y install nodejs
     ##########################################
+    ##########################
+    ## 刪除 ##################
+    ## 把 node_modules 整個砍掉
+    rm -rf node_modules 
     npm install bootstrap
+    npm install font-awesome
     ##########################################
     npm install && npm run dev
     ##########################################
@@ -258,3 +263,12 @@ else
     echo "                [mysql密碼] hello123"
     echo ""
 fi
+
+
+
+
+### 前置
+### cloneNginx 設定  
+### root /usr/share/nginx/html/laravel/public;
+### 查看
+### nano  /etc/nginx/conf.d/default.conf
